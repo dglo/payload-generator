@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="simulator" type="SimulatorType"/>
+
+    <xs:complexType name="SimulatorType">
+        <xs:sequence>
+            <xs:element name="startTime" type="xs:integer"/>
+            <xs:element name="domHub" type="DomHubType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DomHubType">
+        <xs:sequence>
+            <xs:element name="domHubId" type="xs:integer"/>
+            <xs:element name="dom" type="DomType" minOccurs="1" maxOccurs="60"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DomType">
+        <xs:sequence>
+            <xs:element name="domId" type="xs:string"/>
+            <xs:element name="beaconRate" type="xs:float"/>
+            <xs:element name="speRate" type="xs:float"/>
+            <xs:element name="tcalRate" type="xs:float"/>
+            <xs:element name="moniRate" type="xs:float"/>
+            <xs:element name="supernovaRate" type="xs:float"/>
+            <xs:element name="seed" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

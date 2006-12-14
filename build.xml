@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE project [
+    <!-- <!ENTITY LOCAL_PRELIB_JAVA ",ejb.jar.with.resources"> -->
+    <!ENTITY LOCAL_PRECOMPILE_JAVA ",domhub-sim.jaxb">
+    <!ENTITY common-targets SYSTEM "file:../tools/resources/common-targets.xml">
+    <!ENTITY % pjt-defns SYSTEM "file:../tools/resources/sar-defns.xml">
+    %pjt-defns;
+]>
+
+<project name="hitSimulator" default="report" >
+	<description>
+Build the library and documentation for the "hitSimulator" project.
+	</description>
+	&common-targets;
+	&pjt-targets;
+
+    <target name="domhub-sim.jaxb" depends="dependencyPath">
+        <taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask"
+                classpathref="dependencies.path"/>
+        <mkdir dir="${built_src_dir}" />
+
+        <xjc target="${built_src_dir}"
+                schema="${jar_resources_dir}/icecube/daq/sim/domhub/config/SimulationConfiguration.xsd">
+            <arg line="-use-runtime icecube.icebucket.jaxb.impl.runtime" />
+            <depends dir="${jar_resources_dir}">
+                <filename name="icecube/daq/sim/domhub/config/SimulationConfiguration.xsd"/>
+                <filename name="icecube/daq/sim/domhub/config/SimulationConfiguration.xjb"/>
+           </depends>
+            <produces dir="${built_src_dir}" includes="**/simulationConfiguration/*.java"/>
+            <binding dir="${jar_resources_dir}"
+                        includes="icecube/daq/sim/domhub/config/SimulationConfiguration.xjb"/>
+        </xjc>
+
+        <copy todir="${class_dir}">
+                <fileset dir="${built_src_dir}">
+                        <patternset refid="project.jaxb.files" />
+                </fileset>
+        </copy>
+    </target>
+
+</project>

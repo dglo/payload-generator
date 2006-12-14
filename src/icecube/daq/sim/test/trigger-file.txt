@@ -1,0 +1,15 @@
+#
+# Trigger pattern:
+#   This file should have exactly 7 columns separated by spaces.
+#   Column definitions:
+#       1) triggerUid:      integer uid
+#       2) triggerType:     integer type of trigger
+#       3) triggerConfigId: integer config id of trigger
+#       4) sourceId:        integer source id of trigger
+#       5) firstTime:       long    earliest time in ns
+#       6) lastTime:        long    latest time in ns
+#       7) readoutType:     integer readout type
+1 1 1 1 10 20 1
+2 1 1 1 30 40 1
+3 1 1 1 35 45 1
+4 1 1 1 50 60 1
