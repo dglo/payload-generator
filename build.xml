@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 
 <!DOCTYPE project [
+    <!ENTITY PROJECT_SRC_DIR "./src/main/java">
+    <!ENTITY PROJECT_TEST_DIR "./src/test/java">
+    <!ENTITY JAR_RESOURCES_DIR "./src/main/resources">
+    <!ENTITY TESTJAR_RESOURCES_DIR "./src/test/resources">
+    <!ENTITY ABSTRACT_TEST_PATTERN "Abstract*">
     <!-- <!ENTITY LOCAL_PRELIB_JAVA ",ejb.jar.with.resources"> -->
     <!ENTITY LOCAL_PRECOMPILE_JAVA ",domhub-sim.jaxb">
     <!ENTITY common-targets SYSTEM "file:../tools/resources/common-targets.xml">
