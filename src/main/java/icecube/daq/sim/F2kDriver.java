@@ -17,6 +17,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 import icecube.icebucket.logging.LoggingConsumer;
 
@@ -34,6 +35,8 @@ public class F2kDriver
      * Log object for this class
      */
     private static final Log log = LogFactory.getLog(F2kDriver.class);
+
+    private static final double noiseRatePerOM = 800e-10; // in units of 1/10 ns
 
     /**
      * source of GenericHits
@@ -56,11 +59,28 @@ public class F2kDriver
      * @param lifeTime lifetime reported in f2k file (HI ! ! LIFETIME line)
      */
     public F2kDriver(String fileName, int lcMode, int nEventsInFile, float lifeTime) {
+        this(new F2kFileReader(fileName, lcMode, nEventsInFile, lifeTime, noiseRatePerOM), lcMode);
+    }
+
+    /**
+     * constructor
+     * @param stream input stream
+     * @param lcMode local coincidence mode
+     * @param nEventsInFile number of events in f2k file (number of EM lines)
+     * @param lifeTime lifetime reported in f2k file (HI ! ! LIFETIME line)
+     */
+    public F2kDriver(InputStream stream, int lcMode, int nEventsInFile, float lifeTime) {
+        this(new F2kFileReader(stream, lcMode, nEventsInFile, lifeTime, noiseRatePerOM), lcMode);
+    }
+
+    /**
+     * constructor
+     * @param hitSource hit source
+     * @param lcMode local coincidence mode
+     */
+    private F2kDriver(ISource hitSource, int lcMode) {
+        this.hitSource = hitSource;
         this.lcMode = lcMode;
-
-        double noiseRatePerOM = 800e-10; // in units of 1/10 ns
-
-        hitSource = new F2kFileReader(fileName, lcMode, nEventsInFile, lifeTime, noiseRatePerOM);
 
         if ((lcMode == 0) || (lcMode == 1)) {
             timeStampGenerator = null;

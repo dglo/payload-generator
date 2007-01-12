@@ -59,6 +59,13 @@ public class SimpleDriver
     }
 
     /**
+     * default constructor
+     */
+    public SimpleDriver(InputStream input) {
+        this(input, "HitPayload");
+    }
+
+    /**
      * constructor
      * @param fileName name of file with simple hits
      * @param payloadType type of payload to generate (can be HitDataPayload or HitPayload)

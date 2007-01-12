@@ -52,7 +52,9 @@ public class TriggerFileReaderTest
             throws Exception
     {
         super.setUp();
-        testObject = new TriggerFileReader("payload-generator/src/icecube/daq/sim/test/trigger-file.txt");
+        java.io.InputStream stream =
+            getClass().getResourceAsStream("/trigger-file.txt");
+        testObject = new TriggerFileReader(stream);
     }
 
     /**

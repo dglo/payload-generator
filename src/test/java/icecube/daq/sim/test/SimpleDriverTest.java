@@ -36,11 +36,6 @@ public class SimpleDriverTest
     private SimpleDriver testObject;
 
     /**
-     * file of simple hits
-     */
-    private String testFile = "payload-generator/src/icecube/daq/sim/test/test.txt";
-
-    /**
      * Constructs and instance of this test.
      *
      * @param name the name of the test.
@@ -51,37 +46,13 @@ public class SimpleDriverTest
     }
 
     /**
-     * Sets up the fixture, for example, open a network connection. This method
-     * is called before a test is executed.
-     *
-     * @throws Exception if super class setUp fails.
-     */
-    protected void setUp()
-            throws Exception
-    {
-        super.setUp();
-        testObject = new SimpleDriver(testFile);
-    }
-
-    /**
-     * Tears down the fixture, for example, close a network connection. This
-     * method is called after a test is executed.
-     *
-     * @throws Exception if super class tearDown fails.
-     */
-    protected void tearDown()
-            throws Exception
-    {
-        testObject = null;
-        super.tearDown();
-    }
-
-    /**
      * test HitPayloads
      */
     public void testHitPayloads()
     {
-        testObject = new SimpleDriver(testFile, "HitPayload");
+        java.io.InputStream stream =
+            getClass().getResourceAsStream("/test.txt");
+        testObject = new SimpleDriver(stream, "HitPayload");
 
         IPayload payload = testObject.nextHit();
         assertEquals(payload.getPayloadInterfaceType(), PayloadInterfaceRegistry.I_HIT_PAYLOAD);
@@ -104,7 +75,9 @@ public class SimpleDriverTest
      */
     public void testHitDataPayloads()
     {
-        testObject = new SimpleDriver(testFile, "HitDataPayload");
+        java.io.InputStream stream =
+            getClass().getResourceAsStream("/test.txt");
+        testObject = new SimpleDriver(stream, "HitDataPayload");
 
         IPayload payload = testObject.nextHit();
         assertEquals(payload.getPayloadInterfaceType(), PayloadInterfaceRegistry.I_HIT_DATA_PAYLOAD);

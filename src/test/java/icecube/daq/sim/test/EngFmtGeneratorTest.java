@@ -75,7 +75,8 @@ public class EngFmtGeneratorTest
     public void testLength()
     {
         ByteBuffer byteBuffer = testObject.generatePayload(0,0,0,0);
-        assertEquals(byteBuffer.capacity(), byteBuffer.getInt(0));
+        assertEquals("For buffer " + byteBuffer,
+                     byteBuffer.getShort(0), byteBuffer.capacity());
     }
 
     /**

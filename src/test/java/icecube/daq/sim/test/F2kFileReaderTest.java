@@ -52,7 +52,9 @@ public class F2kFileReaderTest
             throws Exception
     {
         super.setUp();
-        testObject = new F2kFileReader("payload-generator/src/icecube/daq/sim/test/test.f2k", 1, 1, 0.0f, 0.0);
+        java.io.InputStream stream =
+            getClass().getResourceAsStream("/test.f2k");
+        testObject = new F2kFileReader(stream, 1, 1, 0.0f, 0.0);
     }
 
     /**
@@ -101,10 +103,8 @@ public class F2kFileReaderTest
         System.out.println("Number with LC    = " + nWithLC);
         System.out.println("Number without LC = " + nWithoutLC);
 
-        System.out.println("First TimeStamp = " + time1);
-        System.out.println("Last  TimeStamp = " + time2);
-
-        assertTrue((18230 == time1) && (44317 == time2));
+        assertEquals("Bad first timestamp", 18230, time1);
+        assertEquals("Bad last timestamp", 44317, time2);
     }
 
     /**

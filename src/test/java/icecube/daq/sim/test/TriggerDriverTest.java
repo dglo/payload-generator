@@ -52,7 +52,9 @@ public class TriggerDriverTest
             throws Exception
     {
         super.setUp();
-        testObject = new TriggerDriver("payload-generator/src/icecube/daq/sim/test/trigger-file.txt");
+        java.io.InputStream stream =
+            getClass().getResourceAsStream("/trigger-file.txt");
+        testObject = new TriggerDriver(stream);
     }
 
     /**

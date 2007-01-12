@@ -34,11 +34,6 @@ public class F2kDriverTest
     private F2kDriver testObject;
 
     /**
-     * file of simple hits
-     */
-    private String testFile = "payload-generator/src/icecube/daq/sim/test/test.f2k";
-
-    /**
      * Constructs and instance of this test.
      *
      * @param name the name of the test.
@@ -58,7 +53,9 @@ public class F2kDriverTest
             throws Exception
     {
         super.setUp();
-        testObject = new F2kDriver(testFile, 1, 1, 0.0f);
+        java.io.InputStream stream =
+            getClass().getResourceAsStream("/test.f2k");
+        testObject = new F2kDriver(stream, 1, 1, 0.0f);
     }
 
     /**
@@ -79,8 +76,6 @@ public class F2kDriverTest
      */
     public void testBuffer()
     {
-        testObject = new F2kDriver(testFile, 1, 1, 0.0f);
-
         ByteBuffer buffer = testObject.nextHit();
         if (null == buffer) {
             System.out.println("BUFFER IS NULL!!!");

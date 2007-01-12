@@ -108,8 +108,17 @@ public class TcalRecordTest
 
         Charset charset = Charset.forName("US-ASCII");
         CharBuffer charBuffer = charset.decode(buffer);
-        String str = charBuffer.subSequence(0, 14).toString();
-        byte bs[] = str.getBytes();
+
+        String gpsString;
+        byte bs[];
+
+        if (charBuffer.length() < 15) {
+            gpsString = null;
+            bs = new byte[0];
+        } else {
+            gpsString = charBuffer.subSequence(0, 14).toString();
+            bs = gpsString.getBytes();
+        }
 
         int pos = buffer.position();
         buffer.position(pos - 8);
@@ -144,7 +153,7 @@ public class TcalRecordTest
 
 
         System.out.println("\n\nGPS record:");
-        System.out.println("    GPS string = " + charBuffer.subSequence(0, 14));
+        System.out.println("    GPS string = " + gpsString);
         System.out.print("               = 0x");
         for (int i=0; i<bs.length; i++) {
             System.out.print(Integer.toHexString(bs[i]));

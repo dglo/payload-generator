@@ -17,6 +17,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.regex.Pattern;
 import java.util.Random;
 import java.util.SortedSet;
@@ -125,7 +127,25 @@ public class F2kFileReader
      * @param noiseRatePerModule noise rate per DOM in units of 1/10 ns
      */
     public F2kFileReader(String f2kFile, int lcMode, int nEventsInFile, float lifeTime, double noiseRatePerModule) {
+        this(openFile(f2kFile), lcMode, nEventsInFile, lifeTime, noiseRatePerModule);
+    }
 
+    /**
+     * constructor that takes the f2k file stream, the local coincidence mode, the event rate, and the
+     * noise rate per DOM
+     * @param f2kStream file stream containing f2k formated events
+     * @param lcMode local coincidence mode
+     * @param nEventsInFile number of events in f2k file
+     * @param lifeTime lifetime of file in s
+     * @param noiseRatePerModule noise rate per DOM in units of 1/10 ns
+     */
+    public F2kFileReader(InputStream f2kStream, int lcMode, int nEventsInFile, float lifeTime, double noiseRatePerModule) {
+        this(openStream(f2kStream), lcMode, nEventsInFile, lifeTime, noiseRatePerModule);
+    }
+
+    private F2kFileReader(BufferedReader f2kReader, int lcMode, int nEventsInFile, float lifeTime, double noiseRatePerModule) {
+
+        this.f2kReader = f2kReader;
         this.lcMode = lcMode;
         this.noiseRatePerModule = noiseRatePerModule;
 
@@ -137,13 +157,6 @@ public class F2kFileReader
         log.info("   LC mode   = " + lcMode);
         log.info("   LifeTime  = " + lifeTime + " seconds");
         log.info("   NoiseRate = " + noiseRatePerModule + " per OM (units are 1/10 ns)");
-
-        // open file reader
-        try {
-            f2kReader = new BufferedReader(new FileReader(f2kFile));
-        } catch (FileNotFoundException e) {
-            log.fatal("File not found!", e);
-        }
 
         // parse header
         try {
@@ -171,10 +184,15 @@ public class F2kFileReader
             generateNoise();
         }
 
+        // now merge the event hits into the hitSet
+        hitSet.addAll(eventHitList);
+
         // scale all times to lifeTime
-        double lastTime = ((GenericF2kHit) hitSet.last()).getTimeStamp();
-        double scale = (lifeTime*1e10)/lastTime;
-        scaleTimes(scale);
+        if (lifeTime > 0.0) {
+            double lastTime = ((GenericF2kHit) hitSet.last()).getTimeStamp();
+            double scale = (lifeTime*1e10)/lastTime;
+            scaleTimes(scale);
+        }
 
         // finally check local coincidence
         if (lcMode != 0) {
@@ -300,9 +318,6 @@ public class F2kFileReader
         log.info("  " + nNoiseHits + " noise hits generated");
         log.info("   from " + firstHitTime + " to " + lastHitTime);
 
-        // now merge the event hits into the hitSet
-        hitSet.addAll(eventHitList);
-
     }
 
     /**
@@ -328,6 +343,24 @@ public class F2kFileReader
             return hit;
         }
 
+    }
+
+    private static BufferedReader openFile(String name) {
+
+        BufferedReader reader;
+        try {
+            reader = new BufferedReader(new FileReader(name));
+        } catch (FileNotFoundException e) {
+            log.fatal("File not found!", e);
+            reader = null;
+        }
+
+        return reader;
+    }
+
+    private static BufferedReader openStream(InputStream stream) {
+
+        return new BufferedReader(new InputStreamReader(stream));
     }
 
     /**

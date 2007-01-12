@@ -52,7 +52,9 @@ public class SimpleFileReaderTest
             throws Exception
     {
         super.setUp();
-        testObject = new SimpleFileReader("payload-generator/src/icecube/daq/sim/test/test.txt");
+        java.io.InputStream stream =
+            getClass().getResourceAsStream("/test.txt");
+        testObject = new SimpleFileReader(stream);
     }
 
     /**
