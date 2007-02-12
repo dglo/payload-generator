@@ -10,6 +10,7 @@
 
 package icecube.daq.sim;
 
+import icecube.daq.payload.ILoadablePayload;
 import icecube.daq.payload.PayloadReader;
 import icecube.daq.payload.MasterPayloadFactory;
 import icecube.daq.payload.PayloadDestination;
@@ -157,7 +158,7 @@ public class EventDumper
         for (int i=0; i<readoutDataPayloads.size(); i++) {
             IReadoutDataPayload readoutDataPayload = (IReadoutDataPayload) readoutDataPayloads.get(i);
             try {
-                ((Payload) readoutDataPayload).loadPayload();
+                ((ILoadablePayload) readoutDataPayload).loadPayload();
             } catch (Exception e) {
                 log.error("Error loading ReadoutDataPayload");
             }
