@@ -1,7 +1,7 @@
 /*
  * class: HitGenerator
  *
- * Version $Id: HitGenerator.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: HitGenerator.java,v 1.6 2006/01/05 22:31:51 dglo Exp $
  *
  * Date: June 2 2005
  *
@@ -15,7 +15,7 @@ import java.nio.ByteBuffer;
 /**
  * This class produces a ByteBuffer representation of a HitPayload
  *
- * @version $Id: HitGenerator.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: HitGenerator.java,v 1.6 2006/01/05 22:31:51 dglo Exp $
  * @author pat
  */
 public class HitGenerator

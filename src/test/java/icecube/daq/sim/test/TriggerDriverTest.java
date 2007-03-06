@@ -1,7 +1,7 @@
 /*
  * class: TriggerDriverTest
  *
- * Version $Id: TriggerDriverTest.java 2657 2008-02-15 23:41:14Z dglo $
+ * Version $Id: TriggerDriverTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
  *
  * Date: June 8 2005
  *
@@ -12,8 +12,8 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.TriggerDriver;
 import icecube.daq.trigger.impl.TriggerRequestPayload;
-
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -21,10 +21,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TriggerDriver object should pass.
  *
  * @author pat
- * @version $Id: TriggerDriverTest.java 2657 2008-02-15 23:41:14Z dglo $
+ * @version $Id: TriggerDriverTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
  */
 public class TriggerDriverTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**
@@ -81,8 +81,8 @@ public class TriggerDriverTest
         int type = trigger.getTriggerType();
         int configId = trigger.getTriggerConfigID();
         int sourceId = trigger.getSourceID().getSourceID();
-        long firstTime = trigger.getFirstTimeUTC().longValue();
-        long lastTime = trigger.getLastTimeUTC().longValue();
+        long firstTime = trigger.getFirstTimeUTC().getUTCTimeAsLong();
+        long lastTime = trigger.getLastTimeUTC().getUTCTimeAsLong();
 
         assertEquals(uid, 1);
         assertEquals(type, 1);

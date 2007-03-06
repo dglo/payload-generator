@@ -1,0 +1,32 @@
+<project>
+	<name>payload-generator</name>
+	<packages default="icecube.daq.sim">
+		
+	</packages>
+	<uses>
+		<libs>
+			icebucket.jar
+			payload.jar
+			splicer.jar
+            daq-common.jar
+		</libs>
+		<tools>
+			commons-logging-api.jar
+            dom4j.jar
+            jaxb-api.jar
+            jaxb-impl.jar
+            jaxb-libs.jar
+            jaxb-xjc.jar
+            relaxngDatatype.jar
+            xsdlib.jar
+		</tools>
+	</uses>
+	<test>
+		<uses>
+			<libs></libs>
+			<tools>
+				junit.jar
+			</tools>
+		</uses>
+	</test>
+</project>

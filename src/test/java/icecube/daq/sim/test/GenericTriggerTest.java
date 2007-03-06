@@ -1,7 +1,7 @@
 /*
  * class: GenericTriggerTest
  *
- * Version $Id: GenericTriggerTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * Version $Id: GenericTriggerTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
  *
  * Date: June 7 2005
  *
@@ -11,8 +11,8 @@
 package icecube.daq.sim.test;
 
 import icecube.daq.sim.GenericTrigger;
-
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -20,10 +20,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any GenericTrigger object should pass.
  *
  * @author pat
- * @version $Id: GenericTriggerTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * @version $Id: GenericTriggerTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
  */
 public class GenericTriggerTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**

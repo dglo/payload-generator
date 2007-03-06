@@ -1,7 +1,7 @@
 /*
  * interface: ISource
  *
- * Version $Id: ISource.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: ISource.java,v 1.3 2005/11/07 18:05:07 dglo Exp $
  *
  * Date: June 3 2005
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim;
 /**
  * This interface defines a source of GenericHits
  *
- * @version $Id: ISource.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: ISource.java,v 1.3 2005/11/07 18:05:07 dglo Exp $
  * @author pat
  */
 public interface ISource

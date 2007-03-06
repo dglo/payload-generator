@@ -1,7 +1,7 @@
 /*
  * class: DriverTest
  *
- * Version $Id: DriverTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * Version $Id: DriverTest.java,v 1.2 2005/06/12 23:10:24 toale Exp $
  *
  * Date: June 2 2005
  *
@@ -11,8 +11,8 @@
 package icecube.daq.sim.test;
 
 import icecube.daq.sim.Driver;
-
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -20,10 +20,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any Driver object should pass.
  *
  * @author pat
- * @version $Id: DriverTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * @version $Id: DriverTest.java,v 1.2 2005/06/12 23:10:24 toale Exp $
  */
 public class DriverTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**

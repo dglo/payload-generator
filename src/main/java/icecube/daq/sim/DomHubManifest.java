@@ -1,7 +1,7 @@
 /*
  * class: EngFmtGenerator
  *
- * Version $Id: DomHubManifest.java 2656 2008-02-15 23:20:07Z dglo $
+ * Version $Id: DomHubManifest.java,v 1.1 2006/05/24 17:42:37 toale Exp $
  *
  * Date: June 10 2005
  *
@@ -13,16 +13,16 @@ package icecube.daq.sim;
 import icecube.daq.payload.IDOMID;
 
 import java.nio.ByteBuffer;
-import java.util.Iterator;
 import java.util.List;
+import java.util.Iterator;
 
 /**
  * This class produces a ByteBuffer representation of a DomHub manifest record.
  *
- * @version $Id: DomHubManifest.java 2656 2008-02-15 23:20:07Z dglo $
+ * @version $Id: DomHubManifest.java,v 1.1 2006/05/24 17:42:37 toale Exp $
  * @author pat
  */
-public final class DomHubManifest
+public class DomHubManifest
 {
 
     /**
@@ -75,7 +75,7 @@ public final class DomHubManifest
         Iterator iter = domIds.iterator();
         while (iter.hasNext()) {
             IDOMID domId = (IDOMID) iter.next();
-            byteBuffer.putLong(offset, domId.longValue());
+            byteBuffer.putLong(offset, domId.getDomIDAsLong());
             offset += DOMID_SIZE;
         }
 

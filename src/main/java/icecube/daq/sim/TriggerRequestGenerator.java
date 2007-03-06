@@ -1,5 +1,5 @@
 /*
- * Version $Id: TriggerRequestGenerator.java 2631 2008-02-11 06:27:31Z dglo $
+ * Version $Id: TriggerRequestGenerator.java,v 1.2 2005/12/20 19:42:23 dglo Exp $
  *
  * (c) 2005 IceCube Collaboration
  */
@@ -9,6 +9,7 @@ package icecube.daq.sim;
 import icecube.daq.payload.PayloadRegistry;
 
 import java.nio.ByteBuffer;
+
 import java.util.Iterator;
 import java.util.Vector;
 

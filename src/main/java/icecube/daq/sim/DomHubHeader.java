@@ -1,7 +1,7 @@
 /*
  * class: EngFmtGenerator
  *
- * Version $Id: DomHubHeader.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: DomHubHeader.java,v 1.2 2006/05/30 14:31:34 toale Exp $
  *
  * Date: June 10 2005
  *
@@ -15,10 +15,10 @@ import java.nio.ByteBuffer;
 /**
  * This class produces a ByteBuffer representation of a DomHub record header.
  *
- * @version $Id: DomHubHeader.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: DomHubHeader.java,v 1.2 2006/05/30 14:31:34 toale Exp $
  * @author pat
  */
-public final class DomHubHeader
+public class DomHubHeader
 {
 
     public static final int HIT_FORMAT_ID = 101;
@@ -43,7 +43,7 @@ public final class DomHubHeader
     private static final int DOMID_OFFSET          = WRAPPER_FORMAT_OFFSET + WRAPPER_FORMAT_SIZE;
 
     private DomHubHeader() {
-
+        
     }
 
     public static int getSize() {

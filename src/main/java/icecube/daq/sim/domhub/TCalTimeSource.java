@@ -1,7 +1,7 @@
 /*
  * class: TCalTimeSource
  *
- * Version $Id: TCalTimeSource.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: TCalTimeSource.java,v 1.2 2005/08/17 17:57:01 toale Exp $
  *
  * Date: August 14 2005
  *
@@ -10,16 +10,16 @@
 
 package icecube.daq.sim.domhub;
 
-import java.util.Random;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import java.util.Random;
 
 /**
  * This class provides time stamps in units of 1/10 ns at a fixed frequency
  * modulated by a guassian smearing.
  *
- * @version $Id: TCalTimeSource.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: TCalTimeSource.java,v 1.2 2005/08/17 17:57:01 toale Exp $
  * @author pat
  */
 public class TCalTimeSource

@@ -1,7 +1,7 @@
 /*
  * class: SimpleDriverTest
  *
- * Version $Id: SimpleDriverTest.java 2657 2008-02-15 23:41:14Z dglo $
+ * Version $Id: SimpleDriverTest.java,v 1.1 2005/06/07 19:38:29 toale Exp $
  *
  * Date: June 6 2005
  *
@@ -10,14 +10,13 @@
 
 package icecube.daq.sim.test;
 
+import icecube.daq.sim.SimpleDriver;
+import icecube.daq.trigger.IHitPayload;
+import icecube.daq.trigger.IHitDataPayload;
 import icecube.daq.payload.IPayload;
 import icecube.daq.payload.PayloadInterfaceRegistry;
-import icecube.daq.payload.SourceIdRegistry;
-import icecube.daq.sim.SimpleDriver;
-import icecube.daq.trigger.IHitDataPayload;
-import icecube.daq.trigger.IHitPayload;
-
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -25,10 +24,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any SimpleDriver object should pass.
  *
  * @author pat
- * @version $Id: SimpleDriverTest.java 2657 2008-02-15 23:41:14Z dglo $
+ * @version $Id: SimpleDriverTest.java,v 1.1 2005/06/07 19:38:29 toale Exp $
  */
 public class SimpleDriverTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**
@@ -59,14 +58,14 @@ public class SimpleDriverTest
         assertEquals(payload.getPayloadInterfaceType(), PayloadInterfaceRegistry.I_HIT_PAYLOAD);
 
         IHitPayload hitPayload = (IHitPayload) payload;
-        long time = hitPayload.getHitTimeUTC().longValue();
-        long domId = hitPayload.getDOMID().longValue();
+        long time = hitPayload.getHitTimeUTC().getUTCTimeAsLong();
+        long domId = hitPayload.getDOMID().getDomIDAsLong();
         int sourceId = hitPayload.getSourceID().getSourceID();
         int triggerMode = hitPayload.getTriggerType();
 
         assertEquals(time, 1);
         assertEquals(domId, 1);
-        assertEquals(sourceId, SourceIdRegistry.INICE_TRIGGER_SOURCE_ID);
+        assertEquals(sourceId, 4000);
         assertEquals(triggerMode, 2);
 
     }
@@ -84,14 +83,14 @@ public class SimpleDriverTest
         assertEquals(payload.getPayloadInterfaceType(), PayloadInterfaceRegistry.I_HIT_DATA_PAYLOAD);
 
         IHitDataPayload hitPayload = (IHitDataPayload) payload;
-        long time = hitPayload.getHitTimeUTC().longValue();
-        long domId = hitPayload.getDOMID().longValue();
+        long time = hitPayload.getHitTimeUTC().getUTCTimeAsLong();
+        long domId = hitPayload.getDOMID().getDomIDAsLong();
         int sourceId = hitPayload.getSourceID().getSourceID();
         int triggerMode = hitPayload.getTriggerType();
 
         assertEquals(time, 1);
         assertEquals(domId, 1);
-        assertEquals(sourceId, SourceIdRegistry.INICE_TRIGGER_SOURCE_ID);
+        assertEquals(sourceId, 4000);
         assertEquals(triggerMode, 2);
 
     }

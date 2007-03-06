@@ -1,7 +1,7 @@
 /*
  * class: DomSimulator
  *
- * Version $Id: DomSimulator.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: DomSimulator.java,v 1.16 2006/11/01 00:58:29 artur Exp $
  *
  * Date: May 26 2006
  *
@@ -10,19 +10,19 @@
 
 package icecube.daq.sim.domhub;
 
-import java.nio.ByteBuffer;
-import java.nio.channels.SocketChannel;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Iterator;
+import java.nio.ByteBuffer;
+import java.nio.channels.SocketChannel;
 
 /**
  * This class simulates a DOM (wow).
  *
- * @version $Id: DomSimulator.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: DomSimulator.java,v 1.16 2006/11/01 00:58:29 artur Exp $
  * @author pat
  */
 public class DomSimulator

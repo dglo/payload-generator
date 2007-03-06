@@ -1,7 +1,7 @@
 /*
  * class: TimeConverter
  *
- * Version $Id: TimeConverter.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: TimeConverter.java,v 1.2 2005/08/17 17:57:01 toale Exp $
  *
  * Date: August 16 2005
  *
@@ -18,7 +18,7 @@ import org.apache.commons.logging.LogFactory;
  * and DOM clock time. It is initialized with a DOR reset time and the DOM-DOR
  * offset time.
  *
- * @version $Id: TimeConverter.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: TimeConverter.java,v 1.2 2005/08/17 17:57:01 toale Exp $
  * @author pat
  */
 public class TimeConverter

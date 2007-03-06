@@ -1,7 +1,7 @@
 /*
  * class: F2kParser
  *
- * Version $Id: F2kFileReader.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: F2kFileReader.java,v 1.7 2005/11/07 18:05:07 dglo Exp $
  *
  * Date: February 25 2005
  *
@@ -10,31 +10,29 @@
 
 package icecube.daq.sim;
 
-import icecube.daq.payload.SourceIdRegistry;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
+import java.util.regex.Pattern;
 import java.util.Random;
-import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
-import java.util.regex.Pattern;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
 
 /**
  * This class parses an f2k file and creats a list of GenericHits
  *
- * @version $Id: F2kFileReader.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: F2kFileReader.java,v 1.7 2005/11/07 18:05:07 dglo Exp $
  * @author pat
  */
 public class F2kFileReader
@@ -303,7 +301,7 @@ public class F2kFileReader
             hit.setStringId(om2string[domIndex]);
             hit.setTimeStamp(currentHitTime);
             hit.setTriggerMode(2);
-            hit.setSourceId(SourceIdRegistry.INICE_TRIGGER_SOURCE_ID);
+            hit.setSourceId(4000);
             hit.setLcTag(0);
 
             // add to set and update last time
@@ -423,7 +421,7 @@ public class F2kFileReader
                             hit.setDomId((long) domNum);
                             hit.setStringId(om2string[domNum - 1]);
                             hit.setTriggerMode(2);
-                            hit.setSourceId(SourceIdRegistry.INICE_TRIGGER_SOURCE_ID);
+                            hit.setSourceId(4000);
                             hit.setLcTag(0);
                             if (Pattern.matches("\\?", fields[5])) {
                                 log.warn("Yikes, unknown time");

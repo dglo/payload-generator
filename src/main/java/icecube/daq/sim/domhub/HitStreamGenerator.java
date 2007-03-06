@@ -1,7 +1,7 @@
 /*
  * class: HitStreamGenerator
  *
- * Version $Id: HitStreamGenerator.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: HitStreamGenerator.java,v 1.6 2006/09/07 04:36:17 toale Exp $
  *
  * Date: May 25 2006
  *
@@ -10,15 +10,15 @@
 
 package icecube.daq.sim.domhub;
 
-import java.util.Random;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import java.util.Random;
 
 /**
  * This class generates generic hit records.
  *
- * @version $Id: HitStreamGenerator.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: HitStreamGenerator.java,v 1.6 2006/09/07 04:36:17 toale Exp $
  * @author pat
  */
 public class HitStreamGenerator

@@ -1,7 +1,7 @@
 /*
  * class: TCalGeneratorTest
  *
- * Version $Id: TcalRecordTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: TcalRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
  *
  * Date: August 13 2005
  *
@@ -10,27 +10,26 @@
 
 package icecube.daq.sim.domhub.test;
 
-import icecube.daq.sim.domhub.GenericTcalRecord;
-import icecube.daq.sim.domhub.IGenericRecord;
 import icecube.daq.sim.domhub.TcalRecord;
-import icecube.daq.sim.test.LoggingCase;
+import icecube.daq.sim.domhub.IGenericRecord;
+import icecube.daq.sim.domhub.GenericTcalRecord;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+import junit.textui.TestRunner;
 
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
-import junit.textui.TestRunner;
-
 /**
  * This class defines the tests that any TCalGenerator object should pass.
  *
  * @author pat
- * @version $Id: TcalRecordTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: TcalRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
  */
 public class TcalRecordTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**
@@ -80,7 +79,7 @@ public class TcalRecordTest
     public void testGenerator() {
         IGenericRecord record = new GenericTcalRecord(85015730000000000L);
         ByteBuffer buffer = testObject.generateRecord(record);
-        //dumpBuffer(buffer);
+        dumpBuffer(buffer);
     }
 
     private void dumpBuffer(ByteBuffer buffer)
@@ -125,6 +124,7 @@ public class TcalRecordTest
         buffer.position(pos - 8);
         long dorCnt = buffer.getLong();
 
+
         System.out.println("\nDump of wrapped tcal record with GPS");
 
         System.out.println("\nWrapper header:");
@@ -159,6 +159,7 @@ public class TcalRecordTest
             System.out.print(Integer.toHexString(bs[i]));
         }
         System.out.println("\n    DOR count  = " + dorCnt);
+
     }
 
     /**

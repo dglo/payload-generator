@@ -1,7 +1,7 @@
 /*
  * class: TCalGeneratorTest
  *
- * Version $Id: EngineeringFormatRecordTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: EngineeringFormatRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
  *
  * Date: August 13 2005
  *
@@ -10,28 +10,27 @@
 
 package icecube.daq.sim.domhub.test;
 
-import icecube.daq.sim.domhub.EngineeringFormatRecord;
-import icecube.daq.sim.domhub.GenericTcalRecord;
-import icecube.daq.sim.domhub.IGenericRecord;
 import icecube.daq.sim.domhub.TcalRecord;
-import icecube.daq.sim.test.LoggingCase;
+import icecube.daq.sim.domhub.IGenericRecord;
+import icecube.daq.sim.domhub.GenericTcalRecord;
+import icecube.daq.sim.domhub.EngineeringFormatRecord;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+import junit.textui.TestRunner;
 
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
-import junit.textui.TestRunner;
-
 /**
  * This class defines the tests that any EngineeringFormatRecord object should pass.
  *
  * @author pat
- * @version $Id: EngineeringFormatRecordTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: EngineeringFormatRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
  */
 public class EngineeringFormatRecordTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**
@@ -79,22 +78,44 @@ public class EngineeringFormatRecordTest
      * Test conversion between time stamp as long and time stamp as 6B array.
      */
     public void testTimeStamp() {
-        long[] allTimes = { 17592186044416L, 0L, 281474976710655L, 1L };
-        for (int i = 0; i < allTimes.length; i++) {
-            long longTime = allTimes[i];
+        long longTime = 17592186044416L;
+        System.out.println(longTime);
+        byte[] byteTime = EngineeringFormatRecord.timeStampToBytes(longTime);
+        System.out.println(EngineeringFormatRecord.toHexString(byteTime));
+        long longTime2 = EngineeringFormatRecord.timeStampToLong(byteTime);
+        System.out.println(longTime2);
+        assertEquals(longTime, longTime2);
 
-            String lStr = "00000000000" + Long.toHexString(longTime);
-            while (lStr.length() > 12 && lStr.charAt(0) == '0') {
-                lStr = lStr.substring(1);
-            }
+        System.out.println("-------------------------");
 
-            byte[] byteTime =
-                EngineeringFormatRecord.timeStampToBytes(longTime);
-            assertEquals("Bad hex timestamp", lStr,
-                         EngineeringFormatRecord.toHexString(byteTime));
-            long longTime2 = EngineeringFormatRecord.timeStampToLong(byteTime);
-            assertEquals(longTime, longTime2);
-        }
+        longTime = 0;
+        System.out.println(longTime);
+        byteTime = EngineeringFormatRecord.timeStampToBytes(longTime);
+        System.out.println(EngineeringFormatRecord.toHexString(byteTime));
+        longTime2 = EngineeringFormatRecord.timeStampToLong(byteTime);
+        System.out.println(longTime2);
+        assertEquals(longTime, longTime2);
+
+        System.out.println("-------------------------");
+
+        longTime = 281474976710655L;
+        System.out.println(longTime);
+        byteTime = EngineeringFormatRecord.timeStampToBytes(longTime);
+        System.out.println(EngineeringFormatRecord.toHexString(byteTime));
+        longTime2 = EngineeringFormatRecord.timeStampToLong(byteTime);
+        System.out.println(longTime2);
+        assertEquals(longTime, longTime2);
+
+        System.out.println("-------------------------");
+
+        longTime = 1;
+        System.out.println(longTime);
+        byteTime = EngineeringFormatRecord.timeStampToBytes(longTime);
+        System.out.println(EngineeringFormatRecord.toHexString(byteTime));
+        longTime2 = EngineeringFormatRecord.timeStampToLong(byteTime);
+        System.out.println(longTime2);
+        assertEquals(longTime, longTime2);
+
     }
 
 

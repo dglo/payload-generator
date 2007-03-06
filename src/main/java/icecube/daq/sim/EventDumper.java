@@ -1,7 +1,7 @@
 /*
  * class: PayloadDumper
  *
- * Version $Id: EventDumper.java 2658 2008-02-15 23:45:21Z dglo $
+ * Version $Id: EventDumper.java,v 1.1 2005/11/01 22:36:37 toale Exp $
  *
  * Date: January 27 2005
  *
@@ -10,23 +10,20 @@
 
 package icecube.daq.sim;
 
-import icecube.daq.eventbuilder.IEventPayload;
-import icecube.daq.eventbuilder.IReadoutDataPayload;
-import icecube.daq.io.FilePayloadDestination;
-import icecube.daq.payload.IDOMID;
 import icecube.daq.payload.ILoadablePayload;
-import icecube.daq.payload.ISourceID;
+import icecube.daq.payload.PayloadReader;
 import icecube.daq.payload.MasterPayloadFactory;
 import icecube.daq.payload.PayloadDestination;
+import icecube.daq.payload.FilePayloadDestination;
 import icecube.daq.payload.PayloadInterfaceRegistry;
-import icecube.daq.payload.SourceIdRegistry;
-import icecube.daq.io.PayloadFileReader;
 import icecube.daq.payload.splicer.Payload;
+import icecube.daq.eventbuilder.IEventPayload;
+import icecube.daq.eventbuilder.IReadoutDataPayload;
 import icecube.daq.trigger.IHitDataPayload;
 import icecube.icebucket.logging.LoggingConsumer;
 
-import java.io.EOFException;
 import java.io.IOException;
+import java.io.EOFException;
 import java.nio.ByteBuffer;
 import java.util.Vector;
 
@@ -36,7 +33,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class dumps payloads to a StringFilePayloadDestination
  *
- * @version $Id: EventDumper.java 2658 2008-02-15 23:45:21Z dglo $
+ * @version $Id: EventDumper.java,v 1.1 2005/11/01 22:36:37 toale Exp $
  * @author pat
  */
 public class EventDumper
@@ -50,47 +47,47 @@ public class EventDumper
     /**
      * Name of inice hit file.
      */
-    private String iniceHitFile = null;
+    String iniceHitFile = null;
 
     /**
      * Name of icetop hit file.
      */
-    private String icetopHitFile = null;
+    String icetopHitFile = null;
 
     /**
      * Payload reader.
      */
-    private PayloadFileReader reader = null;
+    PayloadReader reader = null;
 
     /**
      * Factory for creating payloads.
      */
-    private MasterPayloadFactory inputFactory = null;
+    MasterPayloadFactory inputFactory = null;
 
     /**
      * Destination to dump inice hits to.
      */
-    private PayloadDestination iniceHitDestination = null;
+    PayloadDestination iniceHitDestination = null;
 
     /**
      * Destination to dump icetop hits to.
      */
-    private PayloadDestination icetopHitDestination = null;
+    PayloadDestination icetopHitDestination = null;
 
     /**
      * Event count.
      */
-    private int eventCount = 0;
+    int eventCount = 0;
 
     /**
      * Count of inice hits.
      */
-    private int iniceHitCount = 0;
+    int iniceHitCount = 0;
 
     /**
      * Count if icetop hits.
      */
-    private int icetopHitCount = 0;
+    int icetopHitCount = 0;
 
     /**
      * constructor, sets up IO
@@ -114,11 +111,11 @@ public class EventDumper
      */
     private void dump(String eventFile){
 
-        reader = new PayloadFileReader(eventFile);
+        reader = new PayloadReader(eventFile);
         try {
             reader.open();
         } catch (IOException e) {
-            log.error("Error opening " + eventFile, e);
+            log.error("Error opening PayloadReader", e);
         }
 
         ByteBuffer buffer = ByteBuffer.allocate(320000);
@@ -168,13 +165,12 @@ public class EventDumper
             Vector dataPayloads = readoutDataPayload.getDataPayloads();
             for (int j=0; j<dataPayloads.size(); j++) {
                 IHitDataPayload hitDataPayload = (IHitDataPayload) dataPayloads.get(j);
-                ISourceID srcId = hitDataPayload.getSourceID();
-                IDOMID domId = hitDataPayload.getDOMID();
+                String domId = hitDataPayload.getDOMID().getDomIDAsString();
 
-                if (SourceIdRegistry.isIniceHubSourceID(srcId)) {
+                if (PositionRegistry.isInice(domId)) {
                     log.info("Hit (" + i + "," + j + ") from DOM " + domId + " is inice");
                     try {
-                        iniceHitDestination.writePayload(hitDataPayload);
+                        iniceHitDestination.writePayload((Payload) hitDataPayload);
                     } catch (IOException e) {
                         log.error("Error writing payload", e);
                     }
@@ -183,7 +179,7 @@ public class EventDumper
                 } else {
                     log.info("Hit (" + i + "," + j + ") from DOM " + domId + " is icetop");
                     try {
-                        icetopHitDestination.writePayload(hitDataPayload);
+                        icetopHitDestination.writePayload((Payload) hitDataPayload);
                     } catch (IOException e) {
                         log.error("Error writing payload", e);
                     }
@@ -199,7 +195,7 @@ public class EventDumper
      * main, creates PayloadDumper and starts dumping
      * @param args
      */
-    public static void main(String[] args) {
+    public static void main(String args[]) {
 
         LoggingConsumer.installDefault();
 

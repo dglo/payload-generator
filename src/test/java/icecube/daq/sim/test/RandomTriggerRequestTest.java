@@ -1,5 +1,5 @@
 /*
- * Version $Id: RandomTriggerRequestTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * Version $Id: RandomTriggerRequestTest.java,v 1.3 2005/12/13 20:19:34 dglo Exp $
  *
  * (c) 2005 IceCube Collaboration
  */
@@ -7,8 +7,10 @@
 package icecube.daq.sim.test;
 
 import icecube.daq.common.DAQCmdInterface;
+
 import icecube.daq.payload.ISourceID;
 import icecube.daq.payload.SourceIdRegistry;
+
 import icecube.daq.sim.GenericHit;
 import icecube.daq.sim.GenericTrigger;
 import icecube.daq.sim.RandomTriggerRequest;
@@ -18,10 +20,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 public class RandomTriggerRequestTest
-        extends LoggingCase
+        extends TestCase
 {
     public RandomTriggerRequestTest(String name)
     {
@@ -104,7 +107,7 @@ public class RandomTriggerRequestTest
 
             final long firstTime = trig.getFirstTime();
             final long lastTime = trig.getLastTime();
-
+       
             for (int h = 0; true; h++) {
                 GenericHit hit = (GenericHit) hitSrc.nextPayload();
                 if (hit == null) {

@@ -1,7 +1,7 @@
 /*
  * class: EngFmtGenerator
  *
- * Version $Id: TestDaqHeader.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: TestDaqHeader.java,v 1.2 2006/06/06 14:43:27 dglo Exp $
  *
  * Date: June 10 2005
  *
@@ -15,10 +15,10 @@ import java.nio.ByteBuffer;
 /**
  * This class produces a ByteBuffer representation of a TestDAQ hit record header.
  *
- * @version $Id: TestDaqHeader.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: TestDaqHeader.java,v 1.2 2006/06/06 14:43:27 dglo Exp $
  * @author pat
  */
-public final class TestDaqHeader
+public class TestDaqHeader
 {
 
     /**
@@ -51,7 +51,7 @@ public final class TestDaqHeader
     private static final int WRAPPER_ID_DEFAULT =  2;
 
     private TestDaqHeader() {
-
+        
     }
 
     public static int getSize() {

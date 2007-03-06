@@ -1,7 +1,7 @@
 /*
  * interface: IFactory
  *
- * Version $Id: IFactory.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: IFactory.java,v 1.2 2006/09/07 16:27:11 toale Exp $
  *
  * Date: May 25 2006
  *
@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * This interface defines a factory for converting generic records to real records.
  *
- * @version $Id: IFactory.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: IFactory.java,v 1.2 2006/09/07 16:27:11 toale Exp $
  * @author pat
  */
 public interface IFactory
@@ -27,13 +27,13 @@ public interface IFactory
      *
      * @return ByteBuffer with next record
      */
-    ByteBuffer nextBuffer();
+    public ByteBuffer nextBuffer();
 
     /**
      * Get a list of buffers with times from the lastTime to lastTime+period
      * @param period length of time in ns
      * @return List of ByteBuffers of records
      */
-    List nextBuffers(long period);
+    public List nextBuffers(long period);
 
 }

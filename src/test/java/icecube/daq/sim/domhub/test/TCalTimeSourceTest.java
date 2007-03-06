@@ -1,7 +1,7 @@
 /*
  * class: TCalTimeSourceTest
  *
- * Version $Id: TCalTimeSourceTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * Version $Id: TCalTimeSourceTest.java,v 1.2 2005/08/17 17:57:01 toale Exp $
  *
  * Date: August 14 2005
  *
@@ -11,9 +11,8 @@
 package icecube.daq.sim.domhub.test;
 
 import icecube.daq.sim.domhub.TCalTimeSource;
-import icecube.daq.sim.test.LoggingCase;
-
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -21,10 +20,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TCalTimeSource object should pass.
  *
  * @author pat
- * @version $Id: TCalTimeSourceTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * @version $Id: TCalTimeSourceTest.java,v 1.2 2005/08/17 17:57:01 toale Exp $
  */
 public class TCalTimeSourceTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**
@@ -75,29 +74,19 @@ public class TCalTimeSourceTest
     {
         testObject.setRandomSeed(-1);
 
-        final boolean debug = false;
-
         long time = testObject.nextTime();
-        if (debug) {
-            System.out.println("Wait time =  D, time smear = D: time = " +
-                               time);
-        }
+        System.out.println("Wait time =  D, time smear = D: time = " + time);
 
         testObject.setWaitTime(10);
         testObject.setTimeSmear(0);
         time = testObject.nextTime();
-        if (debug) {
-            System.out.println("Wait time = 10, time smear = 0: time = " +
-                               time);
-        }
+        System.out.println("Wait time = 10, time smear = 0: time = " + time);
 
         testObject.setWaitTime(10);
         testObject.setTimeSmear(5);
         time = testObject.nextTime();
-        if (debug) {
-            System.out.println("Wait time = 10, time smear = 5: time = " +
-                               time);
-        }
+        System.out.println("Wait time = 10, time smear = 5: time = " + time);
+
     }
 
     /**

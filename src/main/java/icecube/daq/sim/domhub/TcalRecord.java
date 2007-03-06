@@ -1,7 +1,7 @@
 /*
  * class: TCalGenerator
  *
- * Version $Id: TcalRecord.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: TcalRecord.java,v 1.3 2006/10/27 17:37:32 toale Exp $
  *
  * Date: August 13 2005
  *
@@ -10,19 +10,19 @@
 
 package icecube.daq.sim.domhub;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.CharBuffer;
-import java.nio.charset.Charset;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
+import java.nio.ByteOrder;
+import java.nio.charset.Charset;
 
 /**
  * This class generates TCAL records based on a template which may or may not
  * represent a valid tcal record.
  *
- * @version $Id: TcalRecord.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: TcalRecord.java,v 1.3 2006/10/27 17:37:32 toale Exp $
  * @author pat
  */
 public class TcalRecord implements IRecord
@@ -39,6 +39,10 @@ public class TcalRecord implements IRecord
     private static final byte ASCII_SOH      = 0x01; // Start of header
     private static final byte ASCII_COLON    = 0x3a; // Separator
     private static final byte ASCII_SPACE    = 0x20; // Quality: < 1   microsecond
+    private static final byte ASCII_PERIOD   = 0x2e; // Quality: < 10  microseconds
+    private static final byte ASCII_ASTERISK = 0x2a; // Quality: < 100 microseconds
+    private static final byte ASCII_POUND    = 0x23; // Quality: < 1   millisecond
+    private static final byte ASCII_QUESTION = 0x3f; // Quality: > 1   millisecond
     private static final byte ASCII_ZERO     = 0x30; // Digits 0-9;
     private static final byte ASCII_ONE      = 0x31;
     private static final byte ASCII_TWO      = 0x32;
@@ -90,7 +94,7 @@ public class TcalRecord implements IRecord
     private static final short RECORD_LENGTH_DEFAULT  = 0x00e0;
     private static final byte  RECORD_FORMAT_DEFAULT  = 0x01;
     private static final byte  RECORD_BLANK_DEFAULT   = 0x00;
-    private static final short[] DOR_WAVEFORM_DEFAULT = {
+    private static final short DOR_WAVEFORM_DEFAULT[] = {
         0x0208, 0x0208, 0x0209, 0x0208, 0x0209, 0x0207, 0x0208, 0x0208,
         0x0209, 0x0208, 0x0208, 0x0207, 0x0207, 0x0206, 0x0208, 0x0206,
         0x0208, 0x0208, 0x0208, 0x0206, 0x0207, 0x0207, 0x0208, 0x020a,
@@ -100,7 +104,7 @@ public class TcalRecord implements IRecord
         0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
         0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000
     };
-    private static final short[] DOM_WAVEFORM_DEFAULT = {
+    private static final short DOM_WAVEFORM_DEFAULT[] = {
         0x01ff, 0x01fe, 0x0200, 0x01ff, 0x0200, 0x0202, 0x0201, 0x0200,
         0x0200, 0x0200, 0x0201, 0x0202, 0x0201, 0x0200, 0x0200, 0x01ff,
         0x01ff, 0x0200, 0x0200, 0x01ff, 0x0200, 0x0200, 0x0200, 0x0203,
@@ -123,17 +127,17 @@ public class TcalRecord implements IRecord
     /**
      * variables for record fields
      */
-    private short   recordLength = RECORD_LENGTH_DEFAULT;
-    private byte    recordFormat = RECORD_FORMAT_DEFAULT;
-    private byte    recordBlank  = RECORD_BLANK_DEFAULT;
-    private long    dorTx;
-    private long    dorRx;
-    private short[] dorWf        = DOR_WAVEFORM_DEFAULT;
-    private long    domRx;
-    private long    domTx;
-    private short[] domWf        = DOM_WAVEFORM_DEFAULT;
-    private byte[]  gpsString    = new byte[14];
-    private long    dorGps;
+    private short recordLength  = RECORD_LENGTH_DEFAULT;
+    private byte  recordFormat  = RECORD_FORMAT_DEFAULT;
+    private byte  recordBlank   = RECORD_BLANK_DEFAULT;
+    private long  dorTx;
+    private long  dorRx;
+    private short dorWf[]       = DOR_WAVEFORM_DEFAULT;
+    private long  domRx;
+    private long  domTx;
+    private short domWf[]       = DOM_WAVEFORM_DEFAULT;
+    private byte  gpsString[]   = new byte[14];
+    private long  dorGps;
 
     /**
      * Service for producing tcal timing data
@@ -279,7 +283,7 @@ public class TcalRecord implements IRecord
     private static byte[] formGpsString(long utcTime) {
 
         long gpsTime = utcTime;
-        byte[] gpsArray = new byte[14];
+        byte gpsArray[] = new byte[14];
 
         // fill SOH byte
         gpsArray[0] = ASCII_SOH;
@@ -289,7 +293,7 @@ public class TcalRecord implements IRecord
         long nDays = 1 + (gpsTime/(24*60*60));
         gpsTime %= (24*60*60);
 
-        char[] days =  String.valueOf(nDays).toCharArray();
+        char days[] =  String.valueOf(nDays).toCharArray();
         if (nDays < 10) {
             gpsArray[1] = ASCII_ZERO;
             gpsArray[2] = ASCII_ZERO;
@@ -309,7 +313,7 @@ public class TcalRecord implements IRecord
         long nHours = gpsTime / (60*60);
         gpsTime %= (60*60);
 
-        char[] hours =  String.valueOf(nHours).toCharArray();
+        char hours[] =  String.valueOf(nHours).toCharArray();
         if (nHours < 10) {
             gpsArray[5] = ASCII_ZERO;
             gpsArray[6] = getAscii(hours[0]);
@@ -323,7 +327,7 @@ public class TcalRecord implements IRecord
         long nMins = gpsTime / 60;
         gpsTime %= 60;
 
-        char[] mins = String.valueOf(nMins).toCharArray();
+        char mins[] = String.valueOf(nMins).toCharArray();
         if (nMins < 10) {
             gpsArray[8] = ASCII_ZERO;
             gpsArray[9] = getAscii(mins[0]);
@@ -336,7 +340,7 @@ public class TcalRecord implements IRecord
         // get number of seconds
         long nSecs = gpsTime;
 
-        char[] secs = String.valueOf(nSecs).toCharArray();
+        char secs[] = String.valueOf(nSecs).toCharArray();
         if (nSecs < 10) {
             gpsArray[11] = ASCII_ZERO;
             gpsArray[12] = getAscii(secs[0]);
@@ -352,7 +356,7 @@ public class TcalRecord implements IRecord
             Charset charset = Charset.forName("US-ASCII");
             CharBuffer charBuffer = charset.decode(ByteBuffer.wrap(gpsArray));
             String gpsString = charBuffer.toString();
-            byte[] bs = gpsString.getBytes();
+            byte bs[] = gpsString.getBytes();
 
             log.debug("Forming GPS string for time = " + utcTime + " seconds\n"
                      + "    Days    = " + nDays + "\n"

@@ -1,7 +1,7 @@
 /*
  * class: RandomSourceTest
  *
- * Version $Id: RandomSourceTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: RandomSourceTest.java,v 1.2 2005/06/08 19:53:53 toale Exp $
  *
  * Date: June 3 2005
  *
@@ -10,10 +10,10 @@
 
 package icecube.daq.sim.test;
 
-import icecube.daq.sim.GenericHit;
 import icecube.daq.sim.RandomSource;
-
+import icecube.daq.sim.GenericHit;
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -21,10 +21,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any RandomSource object should pass.
  *
  * @author pat
- * @version $Id: RandomSourceTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: RandomSourceTest.java,v 1.2 2005/06/08 19:53:53 toale Exp $
  */
 public class RandomSourceTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**
@@ -80,12 +80,9 @@ public class RandomSourceTest
         long time2 = hit2.getTimeStamp();
         int  comp  = hit1.compareTo(hit2);
 
-        final boolean debug = false;
-        if (debug) {
-            System.out.println("Time1 = " + hit1.getTimeStamp());
-            System.out.println("Time2 = " + hit2.getTimeStamp());
-            System.out.println("Comp  = " + hit1.compareTo(hit2));
-        }
+        System.out.println("Time1 = " + time1);
+        System.out.println("Time2 = " + time2);
+        System.out.println("Comp  = " + comp);
 
         assertTrue(hit1.compareTo(hit2) < 0);
     }

@@ -1,7 +1,7 @@
 /*
  * class: SimpleDriver
  *
- * Version $Id: SimpleDriver.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: SimpleDriver.java,v 1.3 2005/08/29 20:52:15 toale Exp $
  *
  * Date: June 6 2005
  *
@@ -10,22 +10,21 @@
 
 package icecube.daq.sim;
 
-import icecube.daq.payload.IPayload;
-import icecube.daq.payload.MasterPayloadFactory;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.ByteBuffer;
-import java.util.zip.DataFormatException;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import icecube.daq.payload.MasterPayloadFactory;
+import icecube.daq.payload.IPayload;
+
+import java.nio.ByteBuffer;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.zip.DataFormatException;
 
 /**
  * This class reads a text file containing GenericHits and produces either HitPayloads
  * or HitDataPayloads.
  *
- * @version $Id: SimpleDriver.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: SimpleDriver.java,v 1.3 2005/08/29 20:52:15 toale Exp $
  * @author pat
  */
 public class SimpleDriver

@@ -1,7 +1,7 @@
 /*
  * class: TimeGeneratorTest
  *
- * Version $Id: TimeGeneratorTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * Version $Id: TimeGeneratorTest.java,v 1.1 2005/06/06 20:11:51 toale Exp $
  *
  * Date: March 1 2005
  *
@@ -11,8 +11,8 @@
 package icecube.daq.sim.test;
 
 import icecube.daq.sim.TimeGenerator;
-
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -20,10 +20,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TimeGenerator object should pass.
  *
  * @author pat
- * @version $Id: TimeGeneratorTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * @version $Id: TimeGeneratorTest.java,v 1.1 2005/06/06 20:11:51 toale Exp $
  */
 public class TimeGeneratorTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**
@@ -87,16 +87,12 @@ public class TimeGeneratorTest
         double sig = Math.sqrt((sum2 - sum1*sum1/n)/(n-1));
 
         double rate = testObject.getRate();
-        assertEquals("Bad rate", (double) n / 1000.0, rate);
-
         double delta1 = Math.abs(1.0/rate - avg)/rate;
         double delta2 = Math.abs(1.0/rate - sig)/rate;
 
-        final boolean debug = false;
-        if (debug) {
-            System.out.println("Average = " + avg + " delta = " + delta1);
-            System.out.println("Sigma   = " + sig + " delta = " + delta2);
-        }
+        System.out.println("Rate    = " + rate);
+        System.out.println("Average = " + avg + " delta = " + delta1);
+        System.out.println("Sigma   = " + sig + " delta = " + delta2);
 
         assertTrue((delta1 < err) && (delta2 < err));
 

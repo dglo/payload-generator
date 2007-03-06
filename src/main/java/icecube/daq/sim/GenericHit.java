@@ -1,7 +1,7 @@
 /*
  * class: GenericHit
  *
- * Version $Id: GenericHit.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: GenericHit.java,v 1.3 2005/12/13 20:12:44 dglo Exp $
  *
  * Date: June 3 2005
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim;
 /**
  * This class is a container for generic hit information
  *
- * @version $Id: GenericHit.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: GenericHit.java,v 1.3 2005/12/13 20:12:44 dglo Exp $
  * @author pat
  */
 public class GenericHit

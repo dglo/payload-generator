@@ -1,7 +1,7 @@
 /*
  * class: RandomSource
  *
- * Version $Id: RandomSource.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: RandomSource.java,v 1.6 2005/11/07 18:05:07 dglo Exp $
  *
  * Date: June 3 2005
  *
@@ -10,14 +10,12 @@
 
 package icecube.daq.sim;
 
-import icecube.daq.payload.SourceIdRegistry;
-
 import java.util.Random;
 
 /**
  * This class produces GenericHits with random time stamps and dom ids
  *
- * @version $Id: RandomSource.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: RandomSource.java,v 1.6 2005/11/07 18:05:07 dglo Exp $
  * @author pat
  */
 public class RandomSource
@@ -26,8 +24,7 @@ public class RandomSource
 
     private static final double RATE_DEFAULT        = 0.0001;   // 1 kHz in units of 1/10 ns
     private static final int    NDOMS_DEFAULT       = 60;
-    private static final int    SOURCEID_DEFAULT    =
-        SourceIdRegistry.STRINGPROCESSOR_SOURCE_ID;
+    private static final int    SOURCEID_DEFAULT    = 2000;
     private static final int    TRIGGERMODE_DEFAULT = 2;
 
     private TimeGenerator timeGenerator;

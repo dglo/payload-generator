@@ -1,7 +1,7 @@
 /*
  * class: ReadoutDataGenerator
  *
- * Version $Id: ReadoutDataGenerator.java 2631 2008-02-11 06:27:31Z dglo $
+ * Version $Id: ReadoutDataGenerator.java,v 1.1 2006/08/18 20:59:22 dglo Exp $
  *
  * Date: August 17 2006
  *
@@ -11,6 +11,7 @@
 package icecube.daq.sim;
 
 import java.nio.ByteBuffer;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.List;
 /**
  * This class produces a ByteBuffer representation of a ReadoutDataPayload
  *
- * @version $Id: ReadoutDataGenerator.java 2631 2008-02-11 06:27:31Z dglo $
+ * @version $Id: ReadoutDataGenerator.java,v 1.1 2006/08/18 20:59:22 dglo Exp $
  * @author dglo
  */
 public class ReadoutDataGenerator

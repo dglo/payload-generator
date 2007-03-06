@@ -1,7 +1,7 @@
 /*
  * class: Driver
  *
- * Version $Id: Driver.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: Driver.java,v 1.3 2005/07/20 18:36:10 toale Exp $
  *
  * Date: June 2 2005
  *
@@ -10,19 +10,19 @@
 
 package icecube.daq.sim;
 
-import icecube.icebucket.logging.LoggingConsumer;
-
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.channels.FileChannel;
-
-import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.commons.logging.Log;
+
+import java.nio.channels.FileChannel;
+import java.io.IOException;
+import java.io.FileOutputStream;
+
+import icecube.icebucket.logging.LoggingConsumer;
 
 /**
  * This class ...does what?
  *
- * @version $Id: Driver.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: Driver.java,v 1.3 2005/07/20 18:36:10 toale Exp $
  * @author pat
  */
 public class Driver
@@ -43,6 +43,7 @@ public class Driver
     // output types
     private static final String OUTPUT_TYPE_OPT  = "-output";
     private static final String FILE_MODE        = "file";
+    private static final String CHANNEL_MODE     = "channel";
 
     // payload types
     private static final String PAYLOAD_OPT      = "-payload";
@@ -54,6 +55,7 @@ public class Driver
     private static final int    MAX_HIT_DEFAULT  = 1000;
 
     private String inputMode;
+    private String outputMode;
     private int maxHit = -1;
     private String payloadType = HIT_DATA_PAYLOAD;
 
@@ -124,7 +126,7 @@ public class Driver
         }
     }
 
-    private boolean parseArguments(String[] args) {
+    private boolean parseArguments(String args[]) {
 
         if (args.length == 0) {
             usage();
@@ -182,7 +184,12 @@ public class Driver
             } else if (arg.equalsIgnoreCase(OUTPUT_TYPE_OPT)) {
                 if (args.length > i+1) {
                     i++;
-                    //String outputType = args[i];
+                    String outputType = args[i];
+
+                    // get output mode
+                    if (outputType.equalsIgnoreCase(FILE_MODE)) {
+                        outputMode = FILE_MODE;
+                    }
 
                     // get file name
                     if (args.length > i+1) {
@@ -264,7 +271,7 @@ public class Driver
         System.exit(-1);
     }
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
 
         LoggingConsumer.installDefault();
 

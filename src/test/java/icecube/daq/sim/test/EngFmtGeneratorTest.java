@@ -1,7 +1,7 @@
 /*
  * class: EngFmtGeneratorTest
  *
- * Version $Id: EngFmtGeneratorTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: EngFmtGeneratorTest.java,v 1.1 2005/06/10 21:34:55 toale Exp $
  *
  * Date: June 10 2005
  *
@@ -11,21 +11,21 @@
 package icecube.daq.sim.test;
 
 import icecube.daq.sim.EngFmtGenerator;
-
-import java.nio.ByteBuffer;
-
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
+
+import java.nio.ByteBuffer;
 
 /**
  * This class defines the tests that any EngFmtGenerator object should pass.
  *
  * @author pat
- * @version $Id: EngFmtGeneratorTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: EngFmtGeneratorTest.java,v 1.1 2005/06/10 21:34:55 toale Exp $
  */
 public class EngFmtGeneratorTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**

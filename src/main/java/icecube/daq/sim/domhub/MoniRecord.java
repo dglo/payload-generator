@@ -1,7 +1,7 @@
 /*
  * class: MoniRecord
  *
- * Version $Id: MoniRecord.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: MoniRecord.java,v 1.4 2006/08/15 14:40:16 toale Exp $
  *
  * Date: June 12 2006
  *
@@ -10,15 +10,15 @@
 
 package icecube.daq.sim.domhub;
 
-import java.nio.ByteBuffer;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import java.nio.ByteBuffer;
 
 /**
  * This class produces valid MONI records. For now it only produces DOM_HARDWARE_STATE records.
  *
- * @version $Id: MoniRecord.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: MoniRecord.java,v 1.4 2006/08/15 14:40:16 toale Exp $
  * @author pat
  */
 public class MoniRecord implements IRecord
@@ -98,10 +98,10 @@ public class MoniRecord implements IRecord
      * @return ByteBuffer representation of real record
      */
     public ByteBuffer generateRecord(IGenericRecord generic) {
-        short fmt = ((IGenericMoniRecord) generic).getFormatId();
-        if (fmt == IGenericMoniRecord.HARDWARE_STATE_EVENT) {
+        short format = ((IGenericMoniRecord) generic).getFormatId();
+        if (format == IGenericMoniRecord.HARDWARE_STATE_EVENT) {
             return generateHardwareStateRecord(generic);
-        } else if (fmt == IGenericMoniRecord.SUPERNOVA_RECORD) {
+        } else if (format == IGenericMoniRecord.SUPERNOVA_RECORD) {
             return generateSupernovaRecord(generic);
         } else {
             return null;
@@ -123,7 +123,7 @@ public class MoniRecord implements IRecord
         if (log.isDebugEnabled()) {
             log.debug("MONI Record: UTCtime= " + utcTime + "  DOMtime= " + domTime);
         }
-        byte[] time = EngineeringFormatRecord.timeStampToBytes(domTime);
+        byte time[] = EngineeringFormatRecord.timeStampToBytes(domTime);
         record.put(time);
 
         // fill in empty record
@@ -149,7 +149,7 @@ public class MoniRecord implements IRecord
         if (log.isDebugEnabled()) {
             log.debug("MONI Record: UTCtime= " + utcTime + "  DOMtime= " + domTime);
         }
-        byte[] time = EngineeringFormatRecord.timeStampToBytes(domTime);
+        byte time[] = EngineeringFormatRecord.timeStampToBytes(domTime);
         record.put(time);
 
         // fill in empty record
@@ -161,6 +161,11 @@ public class MoniRecord implements IRecord
     }
 
     public static boolean isSuperNova(ByteBuffer buffer) {
-        return buffer.getShort(EVENT_TYPE_OFFSET) == SUPERNOVA_RECORD;
+        short format = buffer.getShort(EVENT_TYPE_OFFSET);
+        if (format == SUPERNOVA_RECORD) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

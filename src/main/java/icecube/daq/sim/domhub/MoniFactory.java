@@ -1,7 +1,7 @@
 /*
  * class: HitFactory
  *
- * Version $Id: MoniFactory.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: MoniFactory.java,v 1.4 2006/09/27 16:08:47 toale Exp $
  *
  * Date: May 25 2006
  *
@@ -10,17 +10,17 @@
 
 package icecube.daq.sim.domhub;
 
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import java.nio.ByteBuffer;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * This class turns generic moni records into real moni records, packaged as ByteBuffers.
  *
- * @version $Id: MoniFactory.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: MoniFactory.java,v 1.4 2006/09/27 16:08:47 toale Exp $
  * @author pat
  */
 public class MoniFactory
@@ -33,6 +33,11 @@ public class MoniFactory
     private static final Log log = LogFactory.getLog(MoniFactory.class);
 
     /**
+     * The domid for this stream.
+     */
+    private final long domId;
+
+    /**
      * Generator for the stream.
      */
     private final IStreamGenerator generator;
@@ -41,6 +46,11 @@ public class MoniFactory
      * The maker of ByteBuffers.
      */
     private final IRecord record;
+
+    /**
+     * Time of last record produced.
+     */
+    private long lastTime = -1;
 
     /**
      * Constructor.
@@ -57,6 +67,7 @@ public class MoniFactory
             log.info(dump);
         }
 
+        this.domId = domId;
         this.generator = generator;
         this.record = record;
     }
@@ -90,6 +101,7 @@ public class MoniFactory
             if (timeInMillis >= target) {
                 earlier = false;
             }
+            lastTime = time;
         }
 
         return records;

@@ -1,5 +1,5 @@
 /*
- * Version $Id: GenericTriggerRequest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: GenericTriggerRequest.java,v 1.2 2005/12/20 19:44:41 dglo Exp $
  *
  * (c) 2005 IceCube Collaboration
  */

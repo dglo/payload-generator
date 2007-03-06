@@ -1,7 +1,7 @@
 /*
  * class: TcalStreamGenerator
  *
- * Version $Id: MoniStreamGenerator.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: MoniStreamGenerator.java,v 1.5 2006/09/07 04:36:17 toale Exp $
  *
  * Date: May 25 2006
  *
@@ -16,7 +16,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class generates generic moni records.
  *
- * @version $Id: MoniStreamGenerator.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: MoniStreamGenerator.java,v 1.5 2006/09/07 04:36:17 toale Exp $
  * @author pat
  */
 public class MoniStreamGenerator

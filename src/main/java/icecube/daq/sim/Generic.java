@@ -1,7 +1,7 @@
 /*
  * class: Generic
  *
- * Version $Id: Generic.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: Generic.java,v 1.1 2005/06/08 19:53:53 toale Exp $
  *
  * Date: June 8 2005
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim;
 /**
  * This class ...does what?
  *
- * @version $Id: Generic.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: Generic.java,v 1.1 2005/06/08 19:53:53 toale Exp $
  * @author pat
  */
 public abstract class Generic

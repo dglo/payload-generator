@@ -1,7 +1,7 @@
 /*
  * class: Driver
  *
- * Version $Id: TriggerFileReader.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: TriggerFileReader.java,v 1.6 2005/11/07 18:05:07 dglo Exp $
  *
  * Date: June 2 2005
  *
@@ -10,22 +10,23 @@
 
 package icecube.daq.sim;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Vector;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import java.util.Vector;
 
 /**
  * This class creates GenericTriggers from a simple text file of the form:
  *
  *
- * @version $Id: TriggerFileReader.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: TriggerFileReader.java,v 1.6 2005/11/07 18:05:07 dglo Exp $
  * @author pat
  */
 public class TriggerFileReader

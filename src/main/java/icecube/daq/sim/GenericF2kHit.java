@@ -1,7 +1,7 @@
 /*
  * class: GenericF2kHit
  *
- * Version $Id: GenericF2kHit.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: GenericF2kHit.java,v 1.1 2005/06/22 03:47:55 toale Exp $
  *
  * Date: June 3 2005
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim;
 /**
  * This class is a container for generic f2k hit information
  *
- * @version $Id: GenericF2kHit.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: GenericF2kHit.java,v 1.1 2005/06/22 03:47:55 toale Exp $
  * @author pat
  */
 public class GenericF2kHit

@@ -1,7 +1,7 @@
 /*
  * interface: IRecord
  *
- * Version $Id: IRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: IRecord.java,v 1.1 2006/05/30 14:31:34 toale Exp $
  *
  * Date: May 25 2006
  *
@@ -15,7 +15,7 @@ import java.nio.ByteBuffer;
 /**
  * This interface defines a real DAQ record.
  *
- * @version $Id: IRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: IRecord.java,v 1.1 2006/05/30 14:31:34 toale Exp $
  * @author pat
  */
 public interface IRecord

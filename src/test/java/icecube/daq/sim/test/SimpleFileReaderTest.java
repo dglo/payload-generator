@@ -1,7 +1,7 @@
 /*
  * class: SimpleFileReaderTest
  *
- * Version $Id: SimpleFileReaderTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: SimpleFileReaderTest.java,v 1.3 2005/06/08 19:53:53 toale Exp $
  *
  * Date: June 3 2005
  *
@@ -10,10 +10,10 @@
 
 package icecube.daq.sim.test;
 
-import icecube.daq.sim.GenericHit;
 import icecube.daq.sim.SimpleFileReader;
-
+import icecube.daq.sim.GenericHit;
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -21,10 +21,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any SimpleFileReader object should pass.
  *
  * @author pat
- * @version $Id: SimpleFileReaderTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: SimpleFileReaderTest.java,v 1.3 2005/06/08 19:53:53 toale Exp $
  */
 public class SimpleFileReaderTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**

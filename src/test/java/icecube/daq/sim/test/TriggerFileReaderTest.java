@@ -1,7 +1,7 @@
 /*
  * class: TriggerFileReaderTest
  *
- * Version $Id: TriggerFileReaderTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: TriggerFileReaderTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
  *
  * Date: June 7 2005
  *
@@ -10,10 +10,10 @@
 
 package icecube.daq.sim.test;
 
-import icecube.daq.sim.GenericTrigger;
 import icecube.daq.sim.TriggerFileReader;
-
+import icecube.daq.sim.GenericTrigger;
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -21,10 +21,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TriggerFileReader object should pass.
  *
  * @author pat
- * @version $Id: TriggerFileReaderTest.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: TriggerFileReaderTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
  */
 public class TriggerFileReaderTest
-        extends LoggingCase
+        extends TestCase
 {
 
     /**
@@ -86,7 +86,7 @@ public class TriggerFileReaderTest
         long time3 = trigger3.getFirstTime();
         long time4 = trigger4.getFirstTime();
 
-        assertTrue((time1 == 10) && (time2 == 30) && (time3 == 35) && (time4 == 50) && (trigger5 == null));
+        assertTrue((time1 == 10) && (time2 == 30) && (time3 == 35) && (time4 == 50) && (trigger5 == null));        
     }
 
     /**
