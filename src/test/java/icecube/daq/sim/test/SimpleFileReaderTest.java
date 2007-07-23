@@ -13,7 +13,6 @@ package icecube.daq.sim.test;
 import icecube.daq.sim.SimpleFileReader;
 import icecube.daq.sim.GenericHit;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -24,7 +23,7 @@ import junit.textui.TestRunner;
  * @version $Id: SimpleFileReaderTest.java,v 1.3 2005/06/08 19:53:53 toale Exp $
  */
 public class SimpleFileReaderTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

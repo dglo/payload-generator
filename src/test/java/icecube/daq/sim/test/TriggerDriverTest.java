@@ -13,7 +13,6 @@ package icecube.daq.sim.test;
 import icecube.daq.sim.TriggerDriver;
 import icecube.daq.trigger.impl.TriggerRequestPayload;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -24,7 +23,7 @@ import junit.textui.TestRunner;
  * @version $Id: TriggerDriverTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
  */
 public class TriggerDriverTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

@@ -20,11 +20,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 public class RandomTriggerRequestTest
-        extends TestCase
+        extends LoggingCase
 {
     public RandomTriggerRequestTest(String name)
     {

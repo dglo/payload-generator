@@ -11,8 +11,8 @@
 package icecube.daq.sim.domhub.test;
 
 import icecube.daq.sim.domhub.TCalTimeSource;
+import icecube.daq.sim.test.LoggingCase;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -23,7 +23,7 @@ import junit.textui.TestRunner;
  * @version $Id: TCalTimeSourceTest.java,v 1.2 2005/08/17 17:57:01 toale Exp $
  */
 public class TCalTimeSourceTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**
@@ -74,19 +74,29 @@ public class TCalTimeSourceTest
     {
         testObject.setRandomSeed(-1);
 
+        final boolean debug = false;
+
         long time = testObject.nextTime();
-        System.out.println("Wait time =  D, time smear = D: time = " + time);
+        if (debug) {
+            System.out.println("Wait time =  D, time smear = D: time = " +
+                               time);
+        }
 
         testObject.setWaitTime(10);
         testObject.setTimeSmear(0);
         time = testObject.nextTime();
-        System.out.println("Wait time = 10, time smear = 0: time = " + time);
+        if (debug) {
+            System.out.println("Wait time = 10, time smear = 0: time = " +
+                               time);
+        }
 
         testObject.setWaitTime(10);
         testObject.setTimeSmear(5);
         time = testObject.nextTime();
-        System.out.println("Wait time = 10, time smear = 5: time = " + time);
-
+        if (debug) {
+            System.out.println("Wait time = 10, time smear = 5: time = " +
+                               time);
+        }
     }
 
     /**

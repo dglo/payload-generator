@@ -13,7 +13,6 @@ package icecube.daq.sim.test;
 import icecube.daq.sim.HitGenerator;
 import icecube.daq.trigger.impl.HitPayload;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -26,7 +25,7 @@ import java.nio.ByteBuffer;
  * @version $Id: HitGeneratorTest.java,v 1.4 2006/06/06 14:46:17 dglo Exp $
  */
 public class HitGeneratorTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

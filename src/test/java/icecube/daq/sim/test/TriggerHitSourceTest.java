@@ -11,11 +11,10 @@ import icecube.daq.sim.GenericTrigger;
 import icecube.daq.sim.TriggerHitSource;
 
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 public class TriggerHitSourceTest
-        extends TestCase
+        extends LoggingCase
 {
     public TriggerHitSourceTest(String name)
     {

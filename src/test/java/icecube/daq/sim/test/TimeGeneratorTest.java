@@ -12,7 +12,6 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.TimeGenerator;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -23,7 +22,7 @@ import junit.textui.TestRunner;
  * @version $Id: TimeGeneratorTest.java,v 1.1 2005/06/06 20:11:51 toale Exp $
  */
 public class TimeGeneratorTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**
@@ -87,12 +86,16 @@ public class TimeGeneratorTest
         double sig = Math.sqrt((sum2 - sum1*sum1/n)/(n-1));
 
         double rate = testObject.getRate();
+        assertEquals("Bad rate", (double) n / 1000.0, rate);
+
         double delta1 = Math.abs(1.0/rate - avg)/rate;
         double delta2 = Math.abs(1.0/rate - sig)/rate;
 
-        System.out.println("Rate    = " + rate);
-        System.out.println("Average = " + avg + " delta = " + delta1);
-        System.out.println("Sigma   = " + sig + " delta = " + delta2);
+        final boolean debug = false;
+        if (debug) {
+            System.out.println("Average = " + avg + " delta = " + delta1);
+            System.out.println("Sigma   = " + sig + " delta = " + delta2);
+        }
 
         assertTrue((delta1 < err) && (delta2 < err));
 

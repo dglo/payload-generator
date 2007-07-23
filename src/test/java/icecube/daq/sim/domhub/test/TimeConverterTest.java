@@ -11,8 +11,8 @@
 package icecube.daq.sim.domhub.test;
 
 import icecube.daq.sim.domhub.TimeConverter;
+import icecube.daq.sim.test.LoggingCase;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -23,7 +23,7 @@ import junit.textui.TestRunner;
  * @version $Id: TimeConverterTest.java,v 1.1 2005/08/17 04:53:40 toale Exp $
  */
 public class TimeConverterTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**
@@ -77,26 +77,28 @@ public class TimeConverterTest
         long offset = 617279699625L;
         long gpsOffset = 866;
 
-        System.out.println("TimeConverterTest:");
-        System.out.println("   Trip time      = " + tripTime + " ns");
-        System.out.println("   Offset time    = " + offset + " ns");
-        System.out.println("   DOR reset time = " + gpsOffset + " s");
+        final boolean debug = false;
+        if (debug) {
+            System.out.println("TimeConverterTest:");
+            System.out.println("   Trip time      = " + tripTime + " ns");
+            System.out.println("   Offset time    = " + offset + " ns");
+            System.out.println("   DOR reset time = " + gpsOffset + " s");
 
-        long utcTime = (long) (866*1e10);
-        System.out.println("UTC time = " + utcTime + " 1/10 ns");
-        System.out.println("   DOR clock = " + testObject.getDorClockFromUtcTime(utcTime));
-        System.out.println("   DOM clock = " + testObject.getDomClockFromUtcTime(utcTime));
+            long utcTime = (long) (866*1e10);
+            System.out.println("UTC time = " + utcTime + " 1/10 ns");
+            System.out.println("   DOR clock = " + testObject.getDorClockFromUtcTime(utcTime));
+            System.out.println("   DOM clock = " + testObject.getDomClockFromUtcTime(utcTime));
 
-        long dorClock = 0;
-        System.out.println("DOR clock = " + dorClock);
-        System.out.println("   UTC time  = " + testObject.getUtcTimeFromDorClock(dorClock));
-        System.out.println("   DOM clock = " + testObject.getDomClockFromDorClock(dorClock));
+            long dorClock = 0;
+            System.out.println("DOR clock = " + dorClock);
+            System.out.println("   UTC time  = " + testObject.getUtcTimeFromDorClock(dorClock));
+            System.out.println("   DOM clock = " + testObject.getDomClockFromDorClock(dorClock));
 
-        long domClock = 0;
-        System.out.println("DOM clock = " + domClock);
-        System.out.println("   UTC time  = " + testObject.getUtcTimeFromDomClock(domClock));
-        System.out.println("   DOR clock = " + testObject.getDorClockFromDomClock(domClock));
-
+            long domClock = 0;
+            System.out.println("DOM clock = " + domClock);
+            System.out.println("   UTC time  = " + testObject.getUtcTimeFromDomClock(domClock));
+            System.out.println("   DOR clock = " + testObject.getDorClockFromDomClock(domClock));
+        }
     }
 
     /**

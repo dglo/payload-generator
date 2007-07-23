@@ -13,8 +13,8 @@ package icecube.daq.sim.domhub.test;
 import icecube.daq.sim.domhub.TcalRecord;
 import icecube.daq.sim.domhub.IGenericRecord;
 import icecube.daq.sim.domhub.GenericTcalRecord;
+import icecube.daq.sim.test.LoggingCase;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -29,7 +29,7 @@ import java.nio.charset.Charset;
  * @version $Id: TcalRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
  */
 public class TcalRecordTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**
@@ -79,7 +79,7 @@ public class TcalRecordTest
     public void testGenerator() {
         IGenericRecord record = new GenericTcalRecord(85015730000000000L);
         ByteBuffer buffer = testObject.generateRecord(record);
-        dumpBuffer(buffer);
+        //dumpBuffer(buffer);
     }
 
     private void dumpBuffer(ByteBuffer buffer)
@@ -124,7 +124,6 @@ public class TcalRecordTest
         buffer.position(pos - 8);
         long dorCnt = buffer.getLong();
 
-
         System.out.println("\nDump of wrapped tcal record with GPS");
 
         System.out.println("\nWrapper header:");
@@ -159,7 +158,6 @@ public class TcalRecordTest
             System.out.print(Integer.toHexString(bs[i]));
         }
         System.out.println("\n    DOR count  = " + dorCnt);
-
     }
 
     /**

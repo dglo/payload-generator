@@ -12,7 +12,6 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.F2kDriver;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -25,7 +24,7 @@ import java.nio.ByteBuffer;
  * @version $Id: F2kDriverTest.java,v 1.2 2005/07/20 18:36:53 toale Exp $
  */
 public class F2kDriverTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**
@@ -77,17 +76,8 @@ public class F2kDriverTest
     public void testBuffer()
     {
         ByteBuffer buffer = testObject.nextHit();
-        if (null == buffer) {
-            System.out.println("BUFFER IS NULL!!!");
-        } else {
-            System.out.println("Capacity = " + buffer.capacity());
-        }
         while (null != (buffer = testObject.nextHit())) {
-            if (null == buffer) {
-                System.out.println("BUFFER IS NULL!!!");
-            } else {
-                System.out.println("Capacity = " + buffer.capacity());
-            }
+            System.out.println("Capacity = " + buffer.capacity());
         }
 
     }

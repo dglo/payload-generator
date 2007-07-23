@@ -16,7 +16,6 @@ import icecube.daq.trigger.IHitDataPayload;
 import icecube.daq.payload.IPayload;
 import icecube.daq.payload.PayloadInterfaceRegistry;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -27,7 +26,7 @@ import junit.textui.TestRunner;
  * @version $Id: SimpleDriverTest.java,v 1.1 2005/06/07 19:38:29 toale Exp $
  */
 public class SimpleDriverTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

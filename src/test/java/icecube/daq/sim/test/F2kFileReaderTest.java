@@ -13,7 +13,6 @@ package icecube.daq.sim.test;
 import icecube.daq.sim.F2kFileReader;
 import icecube.daq.sim.GenericF2kHit;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -24,7 +23,7 @@ import junit.textui.TestRunner;
  * @version $Id: F2kFileReaderTest.java,v 1.5 2005/07/20 18:36:34 toale Exp $
  */
 public class F2kFileReaderTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**
@@ -82,16 +81,26 @@ public class F2kFileReaderTest
         GenericF2kHit hit = (GenericF2kHit) testObject.nextPayload();
         long time1 = hit.getTimeStamp();
         long time2 = -1;
-        System.out.println("(" + hit.getDomId() + "," + hit.getStringId() + "," + hit.getTimeStamp()
-                           + ") LCTag = " + hit.getLcTag());
+
+        final boolean debug = false;
+        if (debug) {
+            System.out.println("(" + hit.getDomId() + "," + hit.getStringId() +
+                               "," + hit.getTimeStamp()
+                               + ") LCTag = " + hit.getLcTag());
+        }
+
         if (hit.getLcTag() == 0) {
             nWithoutLC++;
         } else {
             nWithLC++;
         }
         while (null != (hit = (GenericF2kHit) testObject.nextPayload())) {
-            System.out.println("(" + hit.getDomId() + "," + hit.getStringId() + "," + hit.getTimeStamp()
-                               + ") LCTag = " + hit.getLcTag());
+            if (debug) {
+                System.out.println("(" + hit.getDomId() + "," +
+                                   hit.getStringId() + "," +
+                                   hit.getTimeStamp() + ") LCTag = " +
+                                   hit.getLcTag());
+            }
             if (hit.getLcTag() == 0) {
                 nWithoutLC++;
             } else {
@@ -100,8 +109,8 @@ public class F2kFileReaderTest
             time2 = hit.getTimeStamp();
         }
 
-        System.out.println("Number with LC    = " + nWithLC);
-        System.out.println("Number without LC = " + nWithoutLC);
+        assertEquals("Bad number with LC", 0, nWithLC);
+        assertEquals("Bad number without LC", 257, nWithoutLC);
 
         assertEquals("Bad first timestamp", 18230, time1);
         assertEquals("Bad last timestamp", 44317, time2);

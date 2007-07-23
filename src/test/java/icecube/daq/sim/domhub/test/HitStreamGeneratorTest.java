@@ -12,8 +12,8 @@ package icecube.daq.sim.domhub.test;
 
 import icecube.daq.sim.domhub.HitStreamGenerator;
 import icecube.daq.sim.domhub.IGenericRecord;
+import icecube.daq.sim.test.LoggingCase;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -24,7 +24,7 @@ import junit.textui.TestRunner;
  * @version $Id: HitStreamGeneratorTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
  */
 public class HitStreamGeneratorTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

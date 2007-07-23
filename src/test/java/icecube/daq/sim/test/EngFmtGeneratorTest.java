@@ -12,7 +12,6 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.EngFmtGenerator;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -25,7 +24,7 @@ import java.nio.ByteBuffer;
  * @version $Id: EngFmtGeneratorTest.java,v 1.1 2005/06/10 21:34:55 toale Exp $
  */
 public class EngFmtGeneratorTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

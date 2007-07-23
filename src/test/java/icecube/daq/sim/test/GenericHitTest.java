@@ -12,7 +12,6 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.GenericHit;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -23,7 +22,7 @@ import junit.textui.TestRunner;
  * @version $Id: GenericHitTest.java,v 1.1 2005/06/06 20:11:51 toale Exp $
  */
 public class GenericHitTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

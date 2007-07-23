@@ -12,7 +12,6 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.GenericReadoutElement;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -23,7 +22,7 @@ import junit.textui.TestRunner;
  * @version $Id: GenericReadoutElementTest.java,v 1.1 2005/08/09 21:11:50 toale Exp $
  */
 public class GenericReadoutElementTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

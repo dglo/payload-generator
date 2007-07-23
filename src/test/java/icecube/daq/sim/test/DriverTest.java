@@ -12,7 +12,6 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.Driver;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -23,7 +22,7 @@ import junit.textui.TestRunner;
  * @version $Id: DriverTest.java,v 1.2 2005/06/12 23:10:24 toale Exp $
  */
 public class DriverTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

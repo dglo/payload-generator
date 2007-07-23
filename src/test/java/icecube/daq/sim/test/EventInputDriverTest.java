@@ -12,11 +12,10 @@ import java.io.File;
 import java.io.IOException;
 
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 public class EventInputDriverTest
-        extends TestCase
+        extends LoggingCase
 {
     private static final int TRIGREQ_RECORD_LEN = 104;
     private static final int HIT_RECORD_LEN = 38;

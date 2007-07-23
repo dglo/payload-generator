@@ -12,7 +12,6 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.GenericF2kHit;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -23,7 +22,7 @@ import junit.textui.TestRunner;
  * @version $Id: GenericF2kHitTest.java,v 1.1 2005/06/22 03:53:04 toale Exp $
  */
 public class GenericF2kHitTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**
