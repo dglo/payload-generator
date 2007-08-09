@@ -170,7 +170,7 @@ public class EventDumper
                 if (PositionRegistry.isInice(domId)) {
                     log.info("Hit (" + i + "," + j + ") from DOM " + domId + " is inice");
                     try {
-                        iniceHitDestination.writePayload((Payload) hitDataPayload);
+                        iniceHitDestination.writePayload(hitDataPayload);
                     } catch (IOException e) {
                         log.error("Error writing payload", e);
                     }
@@ -179,7 +179,7 @@ public class EventDumper
                 } else {
                     log.info("Hit (" + i + "," + j + ") from DOM " + domId + " is icetop");
                     try {
-                        icetopHitDestination.writePayload((Payload) hitDataPayload);
+                        icetopHitDestination.writePayload(hitDataPayload);
                     } catch (IOException e) {
                         log.error("Error writing payload", e);
                     }
