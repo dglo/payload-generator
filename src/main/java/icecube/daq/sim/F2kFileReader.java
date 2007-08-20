@@ -10,6 +10,8 @@
 
 package icecube.daq.sim;
 
+import icecube.daq.payload.SourceIdRegistry;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -301,7 +303,7 @@ public class F2kFileReader
             hit.setStringId(om2string[domIndex]);
             hit.setTimeStamp(currentHitTime);
             hit.setTriggerMode(2);
-            hit.setSourceId(4000);
+            hit.setSourceId(SourceIdRegistry.INICE_TRIGGER_SOURCE_ID);
             hit.setLcTag(0);
 
             // add to set and update last time
@@ -421,7 +423,7 @@ public class F2kFileReader
                             hit.setDomId((long) domNum);
                             hit.setStringId(om2string[domNum - 1]);
                             hit.setTriggerMode(2);
-                            hit.setSourceId(4000);
+                            hit.setSourceId(SourceIdRegistry.INICE_TRIGGER_SOURCE_ID);
                             hit.setLcTag(0);
                             if (Pattern.matches("\\?", fields[5])) {
                                 log.warn("Yikes, unknown time");

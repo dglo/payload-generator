@@ -10,6 +10,8 @@
 
 package icecube.daq.sim;
 
+import icecube.daq.payload.SourceIdRegistry;
+
 import java.util.Random;
 
 /**
@@ -24,7 +26,8 @@ public class RandomSource
 
     private static final double RATE_DEFAULT        = 0.0001;   // 1 kHz in units of 1/10 ns
     private static final int    NDOMS_DEFAULT       = 60;
-    private static final int    SOURCEID_DEFAULT    = 2000;
+    private static final int    SOURCEID_DEFAULT    =
+        SourceIdRegistry.STRINGPROCESSOR_SOURCE_ID;
     private static final int    TRIGGERMODE_DEFAULT = 2;
 
     private TimeGenerator timeGenerator;

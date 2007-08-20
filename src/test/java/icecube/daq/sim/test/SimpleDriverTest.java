@@ -15,6 +15,7 @@ import icecube.daq.trigger.IHitPayload;
 import icecube.daq.trigger.IHitDataPayload;
 import icecube.daq.payload.IPayload;
 import icecube.daq.payload.PayloadInterfaceRegistry;
+import icecube.daq.payload.SourceIdRegistry;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
@@ -64,7 +65,7 @@ public class SimpleDriverTest
 
         assertEquals(time, 1);
         assertEquals(domId, 1);
-        assertEquals(sourceId, 4000);
+        assertEquals(sourceId, SourceIdRegistry.INICE_TRIGGER_SOURCE_ID);
         assertEquals(triggerMode, 2);
 
     }
@@ -89,7 +90,7 @@ public class SimpleDriverTest
 
         assertEquals(time, 1);
         assertEquals(domId, 1);
-        assertEquals(sourceId, 4000);
+        assertEquals(sourceId, SourceIdRegistry.INICE_TRIGGER_SOURCE_ID);
         assertEquals(triggerMode, 2);
 
     }
