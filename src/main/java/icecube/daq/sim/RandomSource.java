@@ -1,7 +1,7 @@
 /*
  * class: RandomSource
  *
- * Version $Id: RandomSource.java,v 1.6 2005/11/07 18:05:07 dglo Exp $
+ * Version $Id: RandomSource.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 3 2005
  *
@@ -17,7 +17,7 @@ import java.util.Random;
 /**
  * This class produces GenericHits with random time stamps and dom ids
  *
- * @version $Id: RandomSource.java,v 1.6 2005/11/07 18:05:07 dglo Exp $
+ * @version $Id: RandomSource.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class RandomSource

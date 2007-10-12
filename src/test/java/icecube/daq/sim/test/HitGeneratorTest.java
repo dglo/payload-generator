@@ -1,7 +1,7 @@
 /*
  * class: HitGeneratorTest
  *
- * Version $Id: HitGeneratorTest.java,v 1.4 2006/06/06 14:46:17 dglo Exp $
+ * Version $Id: HitGeneratorTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 2 2005
  *
@@ -22,7 +22,7 @@ import java.nio.ByteBuffer;
  * This class defines the tests that any HitGenerator object should pass.
  *
  * @author pat
- * @version $Id: HitGeneratorTest.java,v 1.4 2006/06/06 14:46:17 dglo Exp $
+ * @version $Id: HitGeneratorTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class HitGeneratorTest
         extends LoggingCase

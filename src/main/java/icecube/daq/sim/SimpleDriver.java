@@ -1,7 +1,7 @@
 /*
  * class: SimpleDriver
  *
- * Version $Id: SimpleDriver.java,v 1.3 2005/08/29 20:52:15 toale Exp $
+ * Version $Id: SimpleDriver.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 6 2005
  *
@@ -24,7 +24,7 @@ import java.util.zip.DataFormatException;
  * This class reads a text file containing GenericHits and produces either HitPayloads
  * or HitDataPayloads.
  *
- * @version $Id: SimpleDriver.java,v 1.3 2005/08/29 20:52:15 toale Exp $
+ * @version $Id: SimpleDriver.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class SimpleDriver

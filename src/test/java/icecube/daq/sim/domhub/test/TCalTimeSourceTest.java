@@ -1,7 +1,7 @@
 /*
  * class: TCalTimeSourceTest
  *
- * Version $Id: TCalTimeSourceTest.java,v 1.2 2005/08/17 17:57:01 toale Exp $
+ * Version $Id: TCalTimeSourceTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: August 14 2005
  *
@@ -20,7 +20,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TCalTimeSource object should pass.
  *
  * @author pat
- * @version $Id: TCalTimeSourceTest.java,v 1.2 2005/08/17 17:57:01 toale Exp $
+ * @version $Id: TCalTimeSourceTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class TCalTimeSourceTest
         extends LoggingCase

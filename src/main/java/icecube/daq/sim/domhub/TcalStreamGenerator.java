@@ -1,7 +1,7 @@
 /*
  * class: TcalStreamGenerator
  *
- * Version $Id: TcalStreamGenerator.java,v 1.7 2006/09/07 04:36:17 toale Exp $
+ * Version $Id: TcalStreamGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 25 2006
  *
@@ -16,7 +16,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class generates generic hit records.
  *
- * @version $Id: TcalStreamGenerator.java,v 1.7 2006/09/07 04:36:17 toale Exp $
+ * @version $Id: TcalStreamGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class TcalStreamGenerator

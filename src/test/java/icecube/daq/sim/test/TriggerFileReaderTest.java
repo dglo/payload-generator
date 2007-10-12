@@ -1,7 +1,7 @@
 /*
  * class: TriggerFileReaderTest
  *
- * Version $Id: TriggerFileReaderTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
+ * Version $Id: TriggerFileReaderTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 7 2005
  *
@@ -20,7 +20,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TriggerFileReader object should pass.
  *
  * @author pat
- * @version $Id: TriggerFileReaderTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
+ * @version $Id: TriggerFileReaderTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class TriggerFileReaderTest
         extends LoggingCase

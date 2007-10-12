@@ -1,7 +1,7 @@
 /*
  * interface: IGenericTcalRecord
  *
- * Version $Id: IGenericMoniRecord.java,v 1.2 2006/08/07 15:38:09 toale Exp $
+ * Version $Id: IGenericMoniRecord.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 25 2006
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim.domhub;
 /**
  * This interface defines the methods of a generic moni record.
  *
- * @version $Id: IGenericMoniRecord.java,v 1.2 2006/08/07 15:38:09 toale Exp $
+ * @version $Id: IGenericMoniRecord.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public interface IGenericMoniRecord

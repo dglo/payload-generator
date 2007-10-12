@@ -1,7 +1,7 @@
 /*
  * class: TriggerDriverTest
  *
- * Version $Id: TriggerDriverTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
+ * Version $Id: TriggerDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 8 2005
  *
@@ -20,7 +20,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TriggerDriver object should pass.
  *
  * @author pat
- * @version $Id: TriggerDriverTest.java,v 1.2 2005/06/09 21:16:04 toale Exp $
+ * @version $Id: TriggerDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class TriggerDriverTest
         extends LoggingCase

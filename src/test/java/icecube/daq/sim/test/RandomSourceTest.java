@@ -1,7 +1,7 @@
 /*
  * class: RandomSourceTest
  *
- * Version $Id: RandomSourceTest.java,v 1.2 2005/06/08 19:53:53 toale Exp $
+ * Version $Id: RandomSourceTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 3 2005
  *
@@ -20,7 +20,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any RandomSource object should pass.
  *
  * @author pat
- * @version $Id: RandomSourceTest.java,v 1.2 2005/06/08 19:53:53 toale Exp $
+ * @version $Id: RandomSourceTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class RandomSourceTest
         extends LoggingCase

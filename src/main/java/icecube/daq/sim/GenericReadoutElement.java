@@ -1,7 +1,7 @@
 /*
  * class: GenericReadoutElement
  *
- * Version $Id: GenericReadoutElement.java,v 1.1 2005/08/09 21:11:50 toale Exp $
+ * Version $Id: GenericReadoutElement.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 7 2005
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim;
 /**
  * This class is a containor for generic readout element information
  *
- * @version $Id: GenericReadoutElement.java,v 1.1 2005/08/09 21:11:50 toale Exp $
+ * @version $Id: GenericReadoutElement.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class GenericReadoutElement

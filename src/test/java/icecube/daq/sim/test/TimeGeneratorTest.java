@@ -1,7 +1,7 @@
 /*
  * class: TimeGeneratorTest
  *
- * Version $Id: TimeGeneratorTest.java,v 1.1 2005/06/06 20:11:51 toale Exp $
+ * Version $Id: TimeGeneratorTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: March 1 2005
  *
@@ -19,7 +19,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TimeGenerator object should pass.
  *
  * @author pat
- * @version $Id: TimeGeneratorTest.java,v 1.1 2005/06/06 20:11:51 toale Exp $
+ * @version $Id: TimeGeneratorTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class TimeGeneratorTest
         extends LoggingCase

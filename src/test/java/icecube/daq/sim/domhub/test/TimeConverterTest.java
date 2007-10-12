@@ -1,7 +1,7 @@
 /*
  * class: TimeConverterTest
  *
- * Version $Id: TimeConverterTest.java,v 1.1 2005/08/17 04:53:40 toale Exp $
+ * Version $Id: TimeConverterTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: August 16 2005
  *
@@ -20,7 +20,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TimeConverter object should pass.
  *
  * @author pat
- * @version $Id: TimeConverterTest.java,v 1.1 2005/08/17 04:53:40 toale Exp $
+ * @version $Id: TimeConverterTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class TimeConverterTest
         extends LoggingCase

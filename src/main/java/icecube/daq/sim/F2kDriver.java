@@ -1,7 +1,7 @@
 /*
  * class: F2kDriver
  *
- * Version $Id: F2kDriver.java,v 1.3 2005/07/20 18:11:09 toale Exp $
+ * Version $Id: F2kDriver.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 6 2005
  *
@@ -25,7 +25,7 @@ import icecube.icebucket.logging.LoggingConsumer;
  * This class reads an f2k file and produces either HitPayloads
  * or HitDataPayloads.
  *
- * @version $Id: F2kDriver.java,v 1.3 2005/07/20 18:11:09 toale Exp $
+ * @version $Id: F2kDriver.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class F2kDriver

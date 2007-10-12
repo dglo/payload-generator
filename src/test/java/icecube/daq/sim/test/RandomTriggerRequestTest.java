@@ -1,5 +1,5 @@
 /*
- * Version $Id: RandomTriggerRequestTest.java,v 1.3 2005/12/13 20:19:34 dglo Exp $
+ * Version $Id: RandomTriggerRequestTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * (c) 2005 IceCube Collaboration
  */

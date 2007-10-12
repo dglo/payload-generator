@@ -1,7 +1,7 @@
 /*
  * interface: IGenericHitRecord
  *
- * Version $Id: IGenericHitRecord.java,v 1.1 2006/05/30 14:31:34 toale Exp $
+ * Version $Id: IGenericHitRecord.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 25 2006
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim.domhub;
 /**
  * This interface defines the methods of a generic hit record.
  *
- * @version $Id: IGenericHitRecord.java,v 1.1 2006/05/30 14:31:34 toale Exp $
+ * @version $Id: IGenericHitRecord.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public interface IGenericHitRecord

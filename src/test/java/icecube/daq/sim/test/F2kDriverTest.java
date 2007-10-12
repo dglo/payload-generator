@@ -1,7 +1,7 @@
 /*
  * class: F2kDriverTest
  *
- * Version $Id: F2kDriverTest.java,v 1.2 2005/07/20 18:36:53 toale Exp $
+ * Version $Id: F2kDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 6 2005
  *
@@ -21,7 +21,7 @@ import java.nio.ByteBuffer;
  * This class defines the tests that any F2kDriver object should pass.
  *
  * @author pat
- * @version $Id: F2kDriverTest.java,v 1.2 2005/07/20 18:36:53 toale Exp $
+ * @version $Id: F2kDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class F2kDriverTest
         extends LoggingCase

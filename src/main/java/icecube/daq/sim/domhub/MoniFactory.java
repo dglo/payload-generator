@@ -1,7 +1,7 @@
 /*
  * class: HitFactory
  *
- * Version $Id: MoniFactory.java,v 1.4 2006/09/27 16:08:47 toale Exp $
+ * Version $Id: MoniFactory.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 25 2006
  *
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 /**
  * This class turns generic moni records into real moni records, packaged as ByteBuffers.
  *
- * @version $Id: MoniFactory.java,v 1.4 2006/09/27 16:08:47 toale Exp $
+ * @version $Id: MoniFactory.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class MoniFactory

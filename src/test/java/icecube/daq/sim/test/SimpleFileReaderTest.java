@@ -1,7 +1,7 @@
 /*
  * class: SimpleFileReaderTest
  *
- * Version $Id: SimpleFileReaderTest.java,v 1.3 2005/06/08 19:53:53 toale Exp $
+ * Version $Id: SimpleFileReaderTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 3 2005
  *
@@ -20,7 +20,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any SimpleFileReader object should pass.
  *
  * @author pat
- * @version $Id: SimpleFileReaderTest.java,v 1.3 2005/06/08 19:53:53 toale Exp $
+ * @version $Id: SimpleFileReaderTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class SimpleFileReaderTest
         extends LoggingCase

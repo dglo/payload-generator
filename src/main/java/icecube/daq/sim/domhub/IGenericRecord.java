@@ -1,7 +1,7 @@
 /*
  * interface: IGeneric
  *
- * Version $Id: IGenericRecord.java,v 1.1 2006/05/30 14:31:34 toale Exp $
+ * Version $Id: IGenericRecord.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 8 2005
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim.domhub;
 /**
  * This interface defines a generic comparable object.
  *
- * @version $Id: IGenericRecord.java,v 1.1 2006/05/30 14:31:34 toale Exp $
+ * @version $Id: IGenericRecord.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public interface IGenericRecord

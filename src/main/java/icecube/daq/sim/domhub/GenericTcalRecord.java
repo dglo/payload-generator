@@ -1,7 +1,7 @@
 /*
  * class: GenericTcalRecord
  *
- * Version $Id: GenericTcalRecord.java,v 1.3 2006/06/15 15:44:09 toale Exp $
+ * Version $Id: GenericTcalRecord.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 25 2006
  *
@@ -16,7 +16,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class holds generic tcal information.
  *
- * @version $Id: GenericTcalRecord.java,v 1.3 2006/06/15 15:44:09 toale Exp $
+ * @version $Id: GenericTcalRecord.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class GenericTcalRecord

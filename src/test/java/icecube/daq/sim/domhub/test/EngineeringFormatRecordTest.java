@@ -1,7 +1,7 @@
 /*
  * class: TCalGeneratorTest
  *
- * Version $Id: EngineeringFormatRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
+ * Version $Id: EngineeringFormatRecordTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: August 13 2005
  *
@@ -27,7 +27,7 @@ import java.nio.charset.Charset;
  * This class defines the tests that any EngineeringFormatRecord object should pass.
  *
  * @author pat
- * @version $Id: EngineeringFormatRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
+ * @version $Id: EngineeringFormatRecordTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class EngineeringFormatRecordTest
         extends LoggingCase

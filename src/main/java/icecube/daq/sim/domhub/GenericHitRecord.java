@@ -1,7 +1,7 @@
 /*
  * class: GenericHit
  *
- * Version $Id: GenericHitRecord.java,v 1.2 2006/06/06 20:50:23 toale Exp $
+ * Version $Id: GenericHitRecord.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 25 2006
  *
@@ -16,7 +16,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class holds generic hit information.
  *
- * @version $Id: GenericHitRecord.java,v 1.2 2006/06/06 20:50:23 toale Exp $
+ * @version $Id: GenericHitRecord.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class GenericHitRecord

@@ -1,7 +1,7 @@
 /*
  * class: SimpleDriverTest
  *
- * Version $Id: SimpleDriverTest.java,v 1.1 2005/06/07 19:38:29 toale Exp $
+ * Version $Id: SimpleDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 6 2005
  *
@@ -24,7 +24,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any SimpleDriver object should pass.
  *
  * @author pat
- * @version $Id: SimpleDriverTest.java,v 1.1 2005/06/07 19:38:29 toale Exp $
+ * @version $Id: SimpleDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class SimpleDriverTest
         extends LoggingCase

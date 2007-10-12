@@ -1,7 +1,7 @@
 /*
  * class: PayloadDumper
  *
- * Version $Id: EventDumper.java,v 1.1 2005/11/01 22:36:37 toale Exp $
+ * Version $Id: EventDumper.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: January 27 2005
  *
@@ -33,7 +33,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class dumps payloads to a StringFilePayloadDestination
  *
- * @version $Id: EventDumper.java,v 1.1 2005/11/01 22:36:37 toale Exp $
+ * @version $Id: EventDumper.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class EventDumper

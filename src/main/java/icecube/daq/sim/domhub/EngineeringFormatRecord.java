@@ -1,7 +1,7 @@
 /*
  * class: EngFmtGenerator
  *
- * Version $Id: EngineeringFormatRecord.java,v 1.2 2006/06/03 02:39:54 toale Exp $
+ * Version $Id: EngineeringFormatRecord.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 10 2005
  *
@@ -18,7 +18,7 @@ import java.nio.ByteBuffer;
 /**
  * This class produces a ByteBuffer representation of an Engineering Format hit.
  *
- * @version $Id: EngineeringFormatRecord.java,v 1.2 2006/06/03 02:39:54 toale Exp $
+ * @version $Id: EngineeringFormatRecord.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class EngineeringFormatRecord

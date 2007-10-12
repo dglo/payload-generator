@@ -1,7 +1,7 @@
 /*
  * class: EngFmtGenerator
  *
- * Version $Id: DomHubHeader.java,v 1.2 2006/05/30 14:31:34 toale Exp $
+ * Version $Id: DomHubHeader.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 10 2005
  *
@@ -15,7 +15,7 @@ import java.nio.ByteBuffer;
 /**
  * This class produces a ByteBuffer representation of a DomHub record header.
  *
- * @version $Id: DomHubHeader.java,v 1.2 2006/05/30 14:31:34 toale Exp $
+ * @version $Id: DomHubHeader.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class DomHubHeader

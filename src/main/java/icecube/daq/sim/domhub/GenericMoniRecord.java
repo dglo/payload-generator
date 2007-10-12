@@ -1,7 +1,7 @@
 /*
  * class: GenericTcalRecord
  *
- * Version $Id: GenericMoniRecord.java,v 1.2 2006/08/07 15:38:09 toale Exp $
+ * Version $Id: GenericMoniRecord.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 25 2006
  *
@@ -16,7 +16,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class holds generic moni information.
  *
- * @version $Id: GenericMoniRecord.java,v 1.2 2006/08/07 15:38:09 toale Exp $
+ * @version $Id: GenericMoniRecord.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class GenericMoniRecord

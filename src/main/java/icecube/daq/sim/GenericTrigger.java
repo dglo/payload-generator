@@ -1,7 +1,7 @@
 /*
  * class: GenericTrigger
  *
- * Version $Id: GenericTrigger.java,v 1.4 2005/12/20 19:44:41 dglo Exp $
+ * Version $Id: GenericTrigger.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 7 2005
  *
@@ -15,7 +15,7 @@ import java.util.Vector;
 /**
  * This class is a containor for generic trigger information
  *
- * @version $Id: GenericTrigger.java,v 1.4 2005/12/20 19:44:41 dglo Exp $
+ * @version $Id: GenericTrigger.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class GenericTrigger

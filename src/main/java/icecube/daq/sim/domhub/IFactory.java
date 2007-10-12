@@ -1,7 +1,7 @@
 /*
  * interface: IFactory
  *
- * Version $Id: IFactory.java,v 1.2 2006/09/07 16:27:11 toale Exp $
+ * Version $Id: IFactory.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 25 2006
  *
@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * This interface defines a factory for converting generic records to real records.
  *
- * @version $Id: IFactory.java,v 1.2 2006/09/07 16:27:11 toale Exp $
+ * @version $Id: IFactory.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public interface IFactory

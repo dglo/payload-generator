@@ -1,7 +1,7 @@
 /*
  * class: Driver
  *
- * Version $Id: TriggerFileReader.java,v 1.6 2005/11/07 18:05:07 dglo Exp $
+ * Version $Id: TriggerFileReader.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 2 2005
  *
@@ -26,7 +26,7 @@ import java.util.Vector;
  * This class creates GenericTriggers from a simple text file of the form:
  *
  *
- * @version $Id: TriggerFileReader.java,v 1.6 2005/11/07 18:05:07 dglo Exp $
+ * @version $Id: TriggerFileReader.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class TriggerFileReader

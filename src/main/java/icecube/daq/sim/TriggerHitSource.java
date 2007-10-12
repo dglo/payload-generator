@@ -1,5 +1,5 @@
 /*
- * Version $Id: TriggerHitSource.java,v 1.4 2005/12/13 20:19:34 dglo Exp $
+ * Version $Id: TriggerHitSource.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * (c) 2005 IceCube Collaboration
  */

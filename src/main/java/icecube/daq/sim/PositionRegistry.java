@@ -1,7 +1,7 @@
 /*
  * class: PositionRegistry
  *
- * Version $Id: PositionRegistry.java,v 1.1 2005/11/01 22:37:10 toale Exp $
+ * Version $Id: PositionRegistry.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: February 1 2005
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim;
 /**
  * This class provides static methods for accessing dom identities
  *
- * @version $Id: PositionRegistry.java,v 1.1 2005/11/01 22:37:10 toale Exp $
+ * @version $Id: PositionRegistry.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public final class PositionRegistry

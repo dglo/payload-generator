@@ -1,7 +1,7 @@
 /*
  * class: TCalGeneratorTest
  *
- * Version $Id: GenericHitRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
+ * Version $Id: GenericHitRecordTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: August 13 2005
  *
@@ -20,7 +20,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any GenericHitRecord object should pass.
  *
  * @author pat
- * @version $Id: GenericHitRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
+ * @version $Id: GenericHitRecordTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class GenericHitRecordTest
         extends LoggingCase

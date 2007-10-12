@@ -1,7 +1,7 @@
 /*
  * class: F2kFileReaderTest
  *
- * Version $Id: F2kFileReaderTest.java,v 1.5 2005/07/20 18:36:34 toale Exp $
+ * Version $Id: F2kFileReaderTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: February 25 2005
  *
@@ -20,7 +20,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any F2kFileReader object should pass.
  *
  * @author pat
- * @version $Id: F2kFileReaderTest.java,v 1.5 2005/07/20 18:36:34 toale Exp $
+ * @version $Id: F2kFileReaderTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class F2kFileReaderTest
         extends LoggingCase

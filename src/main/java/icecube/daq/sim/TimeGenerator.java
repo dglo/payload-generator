@@ -1,7 +1,7 @@
 /*
  * class: TimeGenerator
  *
- * Version $Id: TimeGenerator.java,v 1.3 2005/10/25 21:02:26 toale Exp $
+ * Version $Id: TimeGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: March 1 2005
  *
@@ -15,7 +15,7 @@ import java.util.Random;
 /**
  * This class generates Poisson distributed waiting times based on an event rate
  *
- * @version $Id: TimeGenerator.java,v 1.3 2005/10/25 21:02:26 toale Exp $
+ * @version $Id: TimeGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class TimeGenerator

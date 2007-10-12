@@ -1,7 +1,7 @@
 /*
  * class: F2kParser
  *
- * Version $Id: F2kFileReader.java,v 1.7 2005/11/07 18:05:07 dglo Exp $
+ * Version $Id: F2kFileReader.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: February 25 2005
  *
@@ -34,7 +34,7 @@ import java.util.HashSet;
 /**
  * This class parses an f2k file and creats a list of GenericHits
  *
- * @version $Id: F2kFileReader.java,v 1.7 2005/11/07 18:05:07 dglo Exp $
+ * @version $Id: F2kFileReader.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class F2kFileReader
