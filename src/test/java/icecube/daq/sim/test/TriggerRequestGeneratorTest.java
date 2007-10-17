@@ -1,5 +1,5 @@
 /*
- * Version $Id: TriggerRequestGeneratorTest.java,v 1.2 2006/06/06 14:46:17 dglo Exp $
+ * Version $Id: TriggerRequestGeneratorTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * (c) 2005 IceCube Collaboration
  */
@@ -16,11 +16,10 @@ import icecube.daq.trigger.impl.TriggerRequestPayload;
 import java.nio.ByteBuffer;
 
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 public class TriggerRequestGeneratorTest
-        extends TestCase
+        extends LoggingCase
 {
     private TriggerRequestGenerator testObject;
 

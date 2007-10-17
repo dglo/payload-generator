@@ -1,5 +1,5 @@
 /*
- * Version $Id: TriggerRequestGenerator.java,v 1.2 2005/12/20 19:42:23 dglo Exp $
+ * Version $Id: TriggerRequestGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * (c) 2005 IceCube Collaboration
  */

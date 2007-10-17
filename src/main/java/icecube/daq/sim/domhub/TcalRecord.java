@@ -1,7 +1,7 @@
 /*
  * class: TCalGenerator
  *
- * Version $Id: TcalRecord.java,v 1.3 2006/10/27 17:37:32 toale Exp $
+ * Version $Id: TcalRecord.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: August 13 2005
  *
@@ -22,7 +22,7 @@ import java.nio.charset.Charset;
  * This class generates TCAL records based on a template which may or may not
  * represent a valid tcal record.
  *
- * @version $Id: TcalRecord.java,v 1.3 2006/10/27 17:37:32 toale Exp $
+ * @version $Id: TcalRecord.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class TcalRecord implements IRecord

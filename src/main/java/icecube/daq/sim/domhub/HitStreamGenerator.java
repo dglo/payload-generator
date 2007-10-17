@@ -1,7 +1,7 @@
 /*
  * class: HitStreamGenerator
  *
- * Version $Id: HitStreamGenerator.java,v 1.6 2006/09/07 04:36:17 toale Exp $
+ * Version $Id: HitStreamGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 25 2006
  *
@@ -18,7 +18,7 @@ import java.util.Random;
 /**
  * This class generates generic hit records.
  *
- * @version $Id: HitStreamGenerator.java,v 1.6 2006/09/07 04:36:17 toale Exp $
+ * @version $Id: HitStreamGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class HitStreamGenerator

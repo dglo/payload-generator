@@ -1,7 +1,7 @@
 /*
  * class: TCalGeneratorTest
  *
- * Version $Id: GenericTcalRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
+ * Version $Id: GenericTcalRecordTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: August 13 2005
  *
@@ -11,8 +11,8 @@
 package icecube.daq.sim.domhub.test;
 
 import icecube.daq.sim.domhub.GenericTcalRecord;
+import icecube.daq.sim.test.LoggingCase;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -20,10 +20,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any GenericTcalRecord object should pass.
  *
  * @author pat
- * @version $Id: GenericTcalRecordTest.java,v 1.1 2006/05/30 14:31:34 toale Exp $
+ * @version $Id: GenericTcalRecordTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class GenericTcalRecordTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

@@ -1,7 +1,7 @@
 /*
  * class: EngFmtGenerator
  *
- * Version $Id: DomHubManifest.java,v 1.1 2006/05/24 17:42:37 toale Exp $
+ * Version $Id: DomHubManifest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 10 2005
  *
@@ -19,7 +19,7 @@ import java.util.Iterator;
 /**
  * This class produces a ByteBuffer representation of a DomHub manifest record.
  *
- * @version $Id: DomHubManifest.java,v 1.1 2006/05/24 17:42:37 toale Exp $
+ * @version $Id: DomHubManifest.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class DomHubManifest

@@ -1,7 +1,7 @@
 /*
  * class: TCalTimeSource
  *
- * Version $Id: TCalTimeSource.java,v 1.2 2005/08/17 17:57:01 toale Exp $
+ * Version $Id: TCalTimeSource.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: August 14 2005
  *
@@ -19,7 +19,7 @@ import java.util.Random;
  * This class provides time stamps in units of 1/10 ns at a fixed frequency
  * modulated by a guassian smearing.
  *
- * @version $Id: TCalTimeSource.java,v 1.2 2005/08/17 17:57:01 toale Exp $
+ * @version $Id: TCalTimeSource.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class TCalTimeSource

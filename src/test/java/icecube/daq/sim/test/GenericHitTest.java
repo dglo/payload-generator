@@ -1,7 +1,7 @@
 /*
  * class: GenericHitTest
  *
- * Version $Id: GenericHitTest.java,v 1.1 2005/06/06 20:11:51 toale Exp $
+ * Version $Id: GenericHitTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 3 2005
  *
@@ -12,7 +12,6 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.GenericHit;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -20,10 +19,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any GenericHit object should pass.
  *
  * @author pat
- * @version $Id: GenericHitTest.java,v 1.1 2005/06/06 20:11:51 toale Exp $
+ * @version $Id: GenericHitTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class GenericHitTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

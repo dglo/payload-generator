@@ -1,7 +1,7 @@
 /*
  * interface: IDataSource
  *
- * Version $Id: IDataSource.java,v 1.1 2005/08/17 04:53:40 toale Exp $
+ * Version $Id: IDataSource.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: August 15 2005
  *
@@ -15,7 +15,7 @@ import java.nio.ByteBuffer;
 /**
  * This interface defines a source of a simulated data stream
  *
- * @version $Id: IDataSource.java,v 1.1 2005/08/17 04:53:40 toale Exp $
+ * @version $Id: IDataSource.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public interface IDataSource

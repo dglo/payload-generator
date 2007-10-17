@@ -1,7 +1,7 @@
 /*
  * interface: IGenerator
  *
- * Version $Id: IGenerator.java,v 1.4 2005/07/26 23:00:11 toale Exp $
+ * Version $Id: IGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 3 2005
  *
@@ -15,7 +15,7 @@ import java.nio.ByteBuffer;
 /**
  * This interface defines a hit generator
  *
- * @version $Id: IGenerator.java,v 1.4 2005/07/26 23:00:11 toale Exp $
+ * @version $Id: IGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public interface IGenerator

@@ -1,5 +1,5 @@
 /*
- * Version $Id: RandomTriggerRequest.java,v 1.7 2005/12/13 20:19:34 dglo Exp $
+ * Version $Id: RandomTriggerRequest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * (c) 2005 IceCube Collaboration
  */
@@ -39,7 +39,7 @@ public class RandomTriggerRequest
 
     /** List of possible readout request types. */
     public static final int[] READOUT_TYPES = new int[] {
-        IReadoutRequestElement.READOUT_TYPE_IIIT_GLOBAL,
+        IReadoutRequestElement.READOUT_TYPE_GLOBAL,
         IReadoutRequestElement.READOUT_TYPE_II_GLOBAL,
         IReadoutRequestElement.READOUT_TYPE_IT_GLOBAL,
         IReadoutRequestElement.READOUT_TYPE_II_STRING,
@@ -249,7 +249,7 @@ public class RandomTriggerRequest
         int srcId;
 
         switch (readoutType) {
-        case IReadoutRequestElement.READOUT_TYPE_IIIT_GLOBAL:
+        case IReadoutRequestElement.READOUT_TYPE_GLOBAL:
         case IReadoutRequestElement.READOUT_TYPE_II_GLOBAL:
         case IReadoutRequestElement.READOUT_TYPE_IT_GLOBAL:
             srcId = -1;

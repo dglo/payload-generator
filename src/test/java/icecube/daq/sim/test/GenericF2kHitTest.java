@@ -1,7 +1,7 @@
 /*
  * class: GenericF2kHitTest
  *
- * Version $Id: GenericF2kHitTest.java,v 1.1 2005/06/22 03:53:04 toale Exp $
+ * Version $Id: GenericF2kHitTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 3 2005
  *
@@ -12,7 +12,6 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.GenericF2kHit;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -20,10 +19,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any GenericF2kHit object should pass.
  *
  * @author pat
- * @version $Id: GenericF2kHitTest.java,v 1.1 2005/06/22 03:53:04 toale Exp $
+ * @version $Id: GenericF2kHitTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class GenericF2kHitTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

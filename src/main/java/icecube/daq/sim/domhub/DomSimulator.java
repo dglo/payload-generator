@@ -1,7 +1,7 @@
 /*
  * class: DomSimulator
  *
- * Version $Id: DomSimulator.java,v 1.16 2006/11/01 00:58:29 artur Exp $
+ * Version $Id: DomSimulator.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 26 2006
  *
@@ -22,7 +22,7 @@ import java.nio.channels.SocketChannel;
 /**
  * This class simulates a DOM (wow).
  *
- * @version $Id: DomSimulator.java,v 1.16 2006/11/01 00:58:29 artur Exp $
+ * @version $Id: DomSimulator.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class DomSimulator

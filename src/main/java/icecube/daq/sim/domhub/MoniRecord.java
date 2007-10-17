@@ -1,7 +1,7 @@
 /*
  * class: MoniRecord
  *
- * Version $Id: MoniRecord.java,v 1.4 2006/08/15 14:40:16 toale Exp $
+ * Version $Id: MoniRecord.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 12 2006
  *
@@ -18,7 +18,7 @@ import java.nio.ByteBuffer;
 /**
  * This class produces valid MONI records. For now it only produces DOM_HARDWARE_STATE records.
  *
- * @version $Id: MoniRecord.java,v 1.4 2006/08/15 14:40:16 toale Exp $
+ * @version $Id: MoniRecord.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class MoniRecord implements IRecord

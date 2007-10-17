@@ -1,5 +1,5 @@
 /*
- * Version $Id: EventInputDriverTest.java,v 1.2 2005/12/13 20:19:34 dglo Exp $
+ * Version $Id: EventInputDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * (c) 2005 IceCube Collaboration
  */
@@ -12,11 +12,10 @@ import java.io.File;
 import java.io.IOException;
 
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 public class EventInputDriverTest
-        extends TestCase
+        extends LoggingCase
 {
     private static final int TRIGREQ_RECORD_LEN = 104;
     private static final int HIT_RECORD_LEN = 38;

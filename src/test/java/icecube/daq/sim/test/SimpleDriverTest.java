@@ -1,7 +1,7 @@
 /*
  * class: SimpleDriverTest
  *
- * Version $Id: SimpleDriverTest.java,v 1.1 2005/06/07 19:38:29 toale Exp $
+ * Version $Id: SimpleDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 6 2005
  *
@@ -15,8 +15,8 @@ import icecube.daq.trigger.IHitPayload;
 import icecube.daq.trigger.IHitDataPayload;
 import icecube.daq.payload.IPayload;
 import icecube.daq.payload.PayloadInterfaceRegistry;
+import icecube.daq.payload.SourceIdRegistry;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -24,10 +24,10 @@ import junit.textui.TestRunner;
  * This class defines the tests that any SimpleDriver object should pass.
  *
  * @author pat
- * @version $Id: SimpleDriverTest.java,v 1.1 2005/06/07 19:38:29 toale Exp $
+ * @version $Id: SimpleDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class SimpleDriverTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**
@@ -65,7 +65,7 @@ public class SimpleDriverTest
 
         assertEquals(time, 1);
         assertEquals(domId, 1);
-        assertEquals(sourceId, 4000);
+        assertEquals(sourceId, SourceIdRegistry.INICE_TRIGGER_SOURCE_ID);
         assertEquals(triggerMode, 2);
 
     }
@@ -90,7 +90,7 @@ public class SimpleDriverTest
 
         assertEquals(time, 1);
         assertEquals(domId, 1);
-        assertEquals(sourceId, 4000);
+        assertEquals(sourceId, SourceIdRegistry.INICE_TRIGGER_SOURCE_ID);
         assertEquals(triggerMode, 2);
 
     }

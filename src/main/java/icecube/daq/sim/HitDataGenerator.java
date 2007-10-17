@@ -1,7 +1,7 @@
 /*
  * class: HitDataGenerator
  *
- * Version $Id: HitDataGenerator.java,v 1.8 2006/05/18 02:32:44 toale Exp $
+ * Version $Id: HitDataGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 2 2005
  *
@@ -15,7 +15,7 @@ import java.nio.ByteBuffer;
 /**
  * This class produces a ByteBuffer representation of a HitDataPayload
  *
- * @version $Id: HitDataGenerator.java,v 1.8 2006/05/18 02:32:44 toale Exp $
+ * @version $Id: HitDataGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class HitDataGenerator

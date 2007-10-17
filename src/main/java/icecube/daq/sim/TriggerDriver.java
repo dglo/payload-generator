@@ -1,7 +1,7 @@
 /*
  * class: TriggerDriver
  *
- * Version $Id: TriggerDriver.java,v 1.4 2005/08/29 20:52:15 toale Exp $
+ * Version $Id: TriggerDriver.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 8 2005
  *
@@ -31,7 +31,7 @@ import java.io.InputStream;
 /**
  * This class ...does what?
  *
- * @version $Id: TriggerDriver.java,v 1.4 2005/08/29 20:52:15 toale Exp $
+ * @version $Id: TriggerDriver.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class TriggerDriver

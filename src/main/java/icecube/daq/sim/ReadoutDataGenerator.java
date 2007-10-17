@@ -1,7 +1,7 @@
 /*
  * class: ReadoutDataGenerator
  *
- * Version $Id: ReadoutDataGenerator.java,v 1.1 2006/08/18 20:59:22 dglo Exp $
+ * Version $Id: ReadoutDataGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: August 17 2006
  *
@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * This class produces a ByteBuffer representation of a ReadoutDataPayload
  *
- * @version $Id: ReadoutDataGenerator.java,v 1.1 2006/08/18 20:59:22 dglo Exp $
+ * @version $Id: ReadoutDataGenerator.java 2125 2007-10-12 18:27:05Z ksb $
  * @author dglo
  */
 public class ReadoutDataGenerator

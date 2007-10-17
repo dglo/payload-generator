@@ -1,7 +1,7 @@
 /*
  * class: HitGeneratorTest
  *
- * Version $Id: HitGeneratorTest.java,v 1.4 2006/06/06 14:46:17 dglo Exp $
+ * Version $Id: HitGeneratorTest.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 2 2005
  *
@@ -13,7 +13,6 @@ package icecube.daq.sim.test;
 import icecube.daq.sim.HitGenerator;
 import icecube.daq.trigger.impl.HitPayload;
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
@@ -23,10 +22,10 @@ import java.nio.ByteBuffer;
  * This class defines the tests that any HitGenerator object should pass.
  *
  * @author pat
- * @version $Id: HitGeneratorTest.java,v 1.4 2006/06/06 14:46:17 dglo Exp $
+ * @version $Id: HitGeneratorTest.java 2125 2007-10-12 18:27:05Z ksb $
  */
 public class HitGeneratorTest
-        extends TestCase
+        extends LoggingCase
 {
 
     /**

@@ -1,7 +1,7 @@
 /*
  * class: Driver
  *
- * Version $Id: SimpleFileReader.java,v 1.4 2005/11/07 18:05:07 dglo Exp $
+ * Version $Id: SimpleFileReader.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: June 2 2005
  *
@@ -25,7 +25,7 @@ import java.io.InputStreamReader;
  *
  * timeStamp domId sourceId triggerMode
  *
- * @version $Id: SimpleFileReader.java,v 1.4 2005/11/07 18:05:07 dglo Exp $
+ * @version $Id: SimpleFileReader.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class SimpleFileReader

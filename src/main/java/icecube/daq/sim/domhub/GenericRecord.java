@@ -1,7 +1,7 @@
 /*
  * class: GenericRecord
  *
- * Version $Id: GenericRecord.java,v 1.2 2006/06/06 20:50:23 toale Exp $
+ * Version $Id: GenericRecord.java 2125 2007-10-12 18:27:05Z ksb $
  *
  * Date: May 25 2006
  *
@@ -16,7 +16,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class implements the behavior of a generic record, i.e. it is comparable.
  *
- * @version $Id: GenericRecord.java,v 1.2 2006/06/06 20:50:23 toale Exp $
+ * @version $Id: GenericRecord.java 2125 2007-10-12 18:27:05Z ksb $
  * @author pat
  */
 public class GenericRecord
