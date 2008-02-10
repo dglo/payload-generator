@@ -1,7 +1,7 @@
 /*
  * class: GenericRecord
  *
- * Version $Id: GenericRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: GenericRecord.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: May 25 2006
  *
@@ -10,13 +10,10 @@
 
 package icecube.daq.sim.domhub;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 /**
  * This class implements the behavior of a generic record, i.e. it is comparable.
  *
- * @version $Id: GenericRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: GenericRecord.java 2629 2008-02-11 05:48:36Z dglo $
  * @author pat
  */
 public class GenericRecord
@@ -24,14 +21,9 @@ public class GenericRecord
 {
 
     /**
-     * Logging object.
-     */
-    private static final Log log = LogFactory.getLog(GenericRecord.class);
-
-    /**
      * UTC time of the generic record, in units of 1/10 nanoseconds
      */
-    protected long utcTime;
+    private long utcTime;
 
     /**
      * Default constructor, sets utcTime to -1

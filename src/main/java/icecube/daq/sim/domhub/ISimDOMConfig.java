@@ -7,18 +7,18 @@ package icecube.daq.sim.domhub;
  */
 public interface ISimDOMConfig {
 
-    public static String SIMULATOR = "simulator";
-    public static String DOMHUBS = "domHubs";
-    public static String DOMS = "doms";
-    public static String DOMHUB = "domHub";
-    public static String DOM = "dom";
-    public static String DOM_ID = "domID";
-    public static String DOMHUB_ID = "domhubID";
-    public static String TCAL_RATE = "tcalRate";
-    public static String BEACON_RATE = "beaconRate";
-    public static String SPE_RATE = "speRate";
-    public static String DURATION = "duration";
-    public static String SEED = "seed";
-    public static String MAX_HITS = "maxHits";
-    public static String START_UTC_TIME = "startUtcTime";
+    String SIMULATOR = "simulator";
+    String DOMHUBS = "domHubs";
+    String DOMS = "doms";
+    String DOMHUB = "domHub";
+    String DOM = "dom";
+    String DOM_ID = "domID";
+    String DOMHUB_ID = "domhubID";
+    String TCAL_RATE = "tcalRate";
+    String BEACON_RATE = "beaconRate";
+    String SPE_RATE = "speRate";
+    String DURATION = "duration";
+    String SEED = "seed";
+    String MAX_HITS = "maxHits";
+    String START_UTC_TIME = "startUtcTime";
 }

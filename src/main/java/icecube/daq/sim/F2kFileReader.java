@@ -1,7 +1,7 @@
 /*
  * class: F2kParser
  *
- * Version $Id: F2kFileReader.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: F2kFileReader.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: February 25 2005
  *
@@ -12,29 +12,29 @@ package icecube.daq.sim;
 
 import icecube.daq.payload.SourceIdRegistry;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.regex.Pattern;
-import java.util.Random;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.ArrayList;
+import java.util.Random;
 import java.util.Set;
-import java.util.HashSet;
+import java.util.SortedSet;
+import java.util.TreeSet;
+import java.util.regex.Pattern;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * This class parses an f2k file and creats a list of GenericHits
  *
- * @version $Id: F2kFileReader.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: F2kFileReader.java 2629 2008-02-11 05:48:36Z dglo $
  * @author pat
  */
 public class F2kFileReader

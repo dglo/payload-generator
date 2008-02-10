@@ -1,7 +1,7 @@
 /*
  * class: GenericHit
  *
- * Version $Id: GenericHitRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: GenericHitRecord.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: May 25 2006
  *
@@ -10,24 +10,16 @@
 
 package icecube.daq.sim.domhub;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 /**
  * This class holds generic hit information.
  *
- * @version $Id: GenericHitRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: GenericHitRecord.java 2629 2008-02-11 05:48:36Z dglo $
  * @author pat
  */
 public class GenericHitRecord
         extends GenericRecord
         implements IGenericHitRecord
 {
-
-    /**
-     * Logging object.
-     */
-    private static final Log log = LogFactory.getLog(GenericHitRecord.class);
 
     /**
      * Type of hit.
@@ -48,7 +40,7 @@ public class GenericHitRecord
      * @param hitType hit type
      */
     public GenericHitRecord(long utcTime, int hitType) {
-        this.utcTime = utcTime;
+        super(utcTime);
         this.hitType = hitType;
     }
 

@@ -1,7 +1,7 @@
 /*
  * class: GenericTcalRecord
  *
- * Version $Id: GenericMoniRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: GenericMoniRecord.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: May 25 2006
  *
@@ -10,24 +10,16 @@
 
 package icecube.daq.sim.domhub;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 /**
  * This class holds generic moni information.
  *
- * @version $Id: GenericMoniRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: GenericMoniRecord.java 2629 2008-02-11 05:48:36Z dglo $
  * @author pat
  */
 public class GenericMoniRecord
         extends GenericRecord
         implements IGenericMoniRecord
 {
-
-    /**
-     * Logging object.
-     */
-    private static final Log log = LogFactory.getLog(GenericMoniRecord.class);
 
     /**
      * Monitor record format id.
@@ -46,7 +38,7 @@ public class GenericMoniRecord
      * @param utcTime UTC time of record (in 1/10 ns)
      */
     public GenericMoniRecord(long utcTime, short formatId) {
-        this.utcTime = utcTime;
+        super(utcTime);
         this.formatId = formatId;
     }
 

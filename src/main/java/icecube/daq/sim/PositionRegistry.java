@@ -1,7 +1,7 @@
 /*
  * class: PositionRegistry
  *
- * Version $Id: PositionRegistry.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: PositionRegistry.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: February 1 2005
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim;
 /**
  * This class provides static methods for accessing dom identities
  *
- * @version $Id: PositionRegistry.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: PositionRegistry.java 2629 2008-02-11 05:48:36Z dglo $
  * @author pat
  */
 public final class PositionRegistry
@@ -250,7 +250,7 @@ public final class PositionRegistry
     /**
      * helper class to contain dom-wise information
      */
-    private static class DomInfo {
+    private static final class DomInfo {
 
         private int string;
         private int position;

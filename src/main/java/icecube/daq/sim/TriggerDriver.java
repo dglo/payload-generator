@@ -1,7 +1,7 @@
 /*
  * class: TriggerDriver
  *
- * Version $Id: TriggerDriver.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: TriggerDriver.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: June 8 2005
  *
@@ -10,37 +10,30 @@
 
 package icecube.daq.sim;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import icecube.daq.payload.IPayload;
-import icecube.daq.payload.IUTCTime;
-import icecube.daq.payload.ISourceID;
 import icecube.daq.payload.IDOMID;
-import icecube.daq.payload.impl.UTCTime8B;
+import icecube.daq.payload.IPayload;
+import icecube.daq.payload.ISourceID;
+import icecube.daq.payload.IUTCTime;
 import icecube.daq.payload.impl.SourceID4B;
-import icecube.daq.trigger.impl.TriggerRequestPayloadFactory;
-import icecube.daq.trigger.impl.TriggerRequestPayload;
-import icecube.daq.trigger.impl.DOMID8B;
-import icecube.daq.trigger.IReadoutRequestElement;
+import icecube.daq.payload.impl.UTCTime8B;
 import icecube.daq.trigger.IReadoutRequest;
+import icecube.daq.trigger.IReadoutRequestElement;
+import icecube.daq.trigger.impl.DOMID8B;
+import icecube.daq.trigger.impl.TriggerRequestPayload;
+import icecube.daq.trigger.impl.TriggerRequestPayloadFactory;
 
-import java.util.Vector;
-import java.util.Iterator;
 import java.io.InputStream;
+import java.util.Iterator;
+import java.util.Vector;
 
 /**
  * This class ...does what?
  *
- * @version $Id: TriggerDriver.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: TriggerDriver.java 2629 2008-02-11 05:48:36Z dglo $
  * @author pat
  */
 public class TriggerDriver
 {
-
-    /**
-     * Log object for this class
-     */
-    private static final Log log = LogFactory.getLog(TriggerDriver.class);
 
     /**
      * source of GenericTriggers
@@ -130,8 +123,7 @@ public class TriggerDriver
     public static void main(String[] args) {
 
         TriggerDriver driver = new TriggerDriver(args[0]);
-        IPayload payload;
-        while (null != (payload = (IPayload) driver.nextTrigger())) {
+        while (null != driver.nextTrigger()) {
 
         }
 

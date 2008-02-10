@@ -1,7 +1,7 @@
 /*
  * class: EngFmtGenerator
  *
- * Version $Id: EngineeringFormatRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: EngineeringFormatRecord.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: June 10 2005
  *
@@ -10,15 +10,15 @@
 
 package icecube.daq.sim.domhub;
 
+import java.nio.ByteBuffer;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import java.nio.ByteBuffer;
 
 /**
  * This class produces a ByteBuffer representation of an Engineering Format hit.
  *
- * @version $Id: EngineeringFormatRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: EngineeringFormatRecord.java 2629 2008-02-11 05:48:36Z dglo $
  * @author pat
  */
 public class EngineeringFormatRecord
@@ -79,7 +79,7 @@ public class EngineeringFormatRecord
     private static final int ATWD_23_DEFAULT = 0x03;
 
     // table to convert a nibble to a hex char.
-    static char[] hexChar = {
+    private static char[] hexChar = {
        '0' , '1' , '2' , '3' ,
        '4' , '5' , '6' , '7' ,
        '8' , '9' , 'a' , 'b' ,
@@ -266,7 +266,7 @@ public class EngineeringFormatRecord
         byteBuffer.put(SPARE_OFFSET, new Integer(0).byteValue());
         byteBuffer.position(TIME_STAMP_OFFSET);
 
-        byte time[] = timeStampToBytes(timeStamp);
+        byte[] time = timeStampToBytes(timeStamp);
         byteBuffer.put(time);
 
         // waveform
@@ -340,7 +340,7 @@ public class EngineeringFormatRecord
     }
 
     public static long timeStampToLong(byte[] time6B) {
-        byte time8B[] = new byte[8];
+        byte[] time8B = new byte[8];
         time8B[0] = 0;
         time8B[1] = 0;
         time8B[2] = time6B[0];

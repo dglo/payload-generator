@@ -1,7 +1,7 @@
 /*
  * class: PayloadDumper
  *
- * Version $Id: EventDumper.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: EventDumper.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: January 27 2005
  *
@@ -10,20 +10,20 @@
 
 package icecube.daq.sim;
 
-import icecube.daq.payload.ILoadablePayload;
-import icecube.daq.payload.PayloadReader;
-import icecube.daq.payload.MasterPayloadFactory;
-import icecube.daq.payload.PayloadDestination;
-import icecube.daq.payload.FilePayloadDestination;
-import icecube.daq.payload.PayloadInterfaceRegistry;
-import icecube.daq.payload.splicer.Payload;
 import icecube.daq.eventbuilder.IEventPayload;
 import icecube.daq.eventbuilder.IReadoutDataPayload;
+import icecube.daq.payload.FilePayloadDestination;
+import icecube.daq.payload.ILoadablePayload;
+import icecube.daq.payload.MasterPayloadFactory;
+import icecube.daq.payload.PayloadDestination;
+import icecube.daq.payload.PayloadInterfaceRegistry;
+import icecube.daq.payload.PayloadReader;
+import icecube.daq.payload.splicer.Payload;
 import icecube.daq.trigger.IHitDataPayload;
 import icecube.icebucket.logging.LoggingConsumer;
 
-import java.io.IOException;
 import java.io.EOFException;
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Vector;
 
@@ -33,7 +33,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class dumps payloads to a StringFilePayloadDestination
  *
- * @version $Id: EventDumper.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: EventDumper.java 2629 2008-02-11 05:48:36Z dglo $
  * @author pat
  */
 public class EventDumper
@@ -47,47 +47,47 @@ public class EventDumper
     /**
      * Name of inice hit file.
      */
-    String iniceHitFile = null;
+    private String iniceHitFile = null;
 
     /**
      * Name of icetop hit file.
      */
-    String icetopHitFile = null;
+    private String icetopHitFile = null;
 
     /**
      * Payload reader.
      */
-    PayloadReader reader = null;
+    private PayloadReader reader = null;
 
     /**
      * Factory for creating payloads.
      */
-    MasterPayloadFactory inputFactory = null;
+    private MasterPayloadFactory inputFactory = null;
 
     /**
      * Destination to dump inice hits to.
      */
-    PayloadDestination iniceHitDestination = null;
+    private PayloadDestination iniceHitDestination = null;
 
     /**
      * Destination to dump icetop hits to.
      */
-    PayloadDestination icetopHitDestination = null;
+    private PayloadDestination icetopHitDestination = null;
 
     /**
      * Event count.
      */
-    int eventCount = 0;
+    private int eventCount = 0;
 
     /**
      * Count of inice hits.
      */
-    int iniceHitCount = 0;
+    private int iniceHitCount = 0;
 
     /**
      * Count if icetop hits.
      */
-    int icetopHitCount = 0;
+    private int icetopHitCount = 0;
 
     /**
      * constructor, sets up IO
@@ -195,7 +195,7 @@ public class EventDumper
      * main, creates PayloadDumper and starts dumping
      * @param args
      */
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         LoggingConsumer.installDefault();
 

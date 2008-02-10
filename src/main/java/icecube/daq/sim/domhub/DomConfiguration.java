@@ -1,7 +1,7 @@
 /*
  * class: DomConfiguration
  *
- * Version $Id: DomConfiguration.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: DomConfiguration.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: May 28 2006
  *
@@ -10,19 +10,14 @@
 
 package icecube.daq.sim.domhub;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 /**
  * This class holds dom simulation configuration data.
  *
- * @version $Id: DomConfiguration.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: DomConfiguration.java 2629 2008-02-11 05:48:36Z dglo $
  * @author pat
  */
 public class DomConfiguration
 {
-
-    private static final Log log = LogFactory.getLog(DomConfiguration.class);
 
     private long domId;
 
@@ -43,7 +38,7 @@ public class DomConfiguration
     public DomConfiguration() {
 
     }
-    
+
     public long getDomId() {
         return domId;
     }

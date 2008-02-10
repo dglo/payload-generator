@@ -1,7 +1,7 @@
 /*
  * class: SimpleDriverTest
  *
- * Version $Id: SimpleDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: SimpleDriverTest.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: June 6 2005
  *
@@ -10,12 +10,13 @@
 
 package icecube.daq.sim.test;
 
-import icecube.daq.sim.SimpleDriver;
-import icecube.daq.trigger.IHitPayload;
-import icecube.daq.trigger.IHitDataPayload;
 import icecube.daq.payload.IPayload;
 import icecube.daq.payload.PayloadInterfaceRegistry;
 import icecube.daq.payload.SourceIdRegistry;
+import icecube.daq.sim.SimpleDriver;
+import icecube.daq.trigger.IHitDataPayload;
+import icecube.daq.trigger.IHitPayload;
+
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
@@ -24,7 +25,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any SimpleDriver object should pass.
  *
  * @author pat
- * @version $Id: SimpleDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: SimpleDriverTest.java 2629 2008-02-11 05:48:36Z dglo $
  */
 public class SimpleDriverTest
         extends LoggingCase

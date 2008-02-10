@@ -1,5 +1,5 @@
 /*
- * Version $Id: EventInputDriver.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: EventInputDriver.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * (c) 2005 IceCube Collaboration
  */
@@ -7,22 +7,18 @@
 package icecube.daq.sim;
 
 import icecube.daq.common.DAQCmdInterface;
-
 import icecube.daq.payload.ISourceID;
 import icecube.daq.payload.SourceIdRegistry;
-
 import icecube.icebucket.logging.LoggingConsumer;
 
-import java.io.IOException;
 import java.io.FileOutputStream;
-
+import java.io.IOException;
 import java.nio.channels.FileChannel;
-
-import java.util.Collection;
 import java.util.ArrayList;
+import java.util.Collection;
 
-import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * Write triggers and corresponding hits to files,
@@ -180,8 +176,7 @@ public class EventInputDriver
      *
      * @return collection of source IDs
      */
-    private static final Collection getDestinations(int numIceTop,
-                                                    int numInIce)
+    private static Collection getDestinations(int numIceTop, int numInIce)
     {
         ArrayList list = new ArrayList();
 

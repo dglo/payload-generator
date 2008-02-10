@@ -1,5 +1,5 @@
 /*
- * Version $Id: TriggerRequestGeneratorTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: TriggerRequestGeneratorTest.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * (c) 2005 IceCube Collaboration
  */
@@ -7,10 +7,8 @@
 package icecube.daq.sim.test;
 
 import icecube.daq.payload.PayloadRegistry;
-
-import icecube.daq.sim.TriggerRequestGenerator;
 import icecube.daq.sim.GenericTriggerRequest;
-
+import icecube.daq.sim.TriggerRequestGenerator;
 import icecube.daq.trigger.impl.TriggerRequestPayload;
 
 import java.nio.ByteBuffer;

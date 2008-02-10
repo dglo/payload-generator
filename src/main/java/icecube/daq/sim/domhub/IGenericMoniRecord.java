@@ -1,7 +1,7 @@
 /*
  * interface: IGenericTcalRecord
  *
- * Version $Id: IGenericMoniRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: IGenericMoniRecord.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: May 25 2006
  *
@@ -13,7 +13,7 @@ package icecube.daq.sim.domhub;
 /**
  * This interface defines the methods of a generic moni record.
  *
- * @version $Id: IGenericMoniRecord.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: IGenericMoniRecord.java 2629 2008-02-11 05:48:36Z dglo $
  * @author pat
  */
 public interface IGenericMoniRecord
@@ -23,12 +23,12 @@ public interface IGenericMoniRecord
     /**
      * Hardware state event format id
      */
-    static final short HARDWARE_STATE_EVENT = 200;
+    short HARDWARE_STATE_EVENT = 200;
 
     /**
      * Supernova record format id
      */
-    static final short SUPERNOVA_RECORD = 300;
+    short SUPERNOVA_RECORD = 300;
 
     /**
      * Get the format id.

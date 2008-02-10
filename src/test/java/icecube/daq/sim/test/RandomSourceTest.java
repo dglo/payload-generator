@@ -1,7 +1,7 @@
 /*
  * class: RandomSourceTest
  *
- * Version $Id: RandomSourceTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: RandomSourceTest.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: June 3 2005
  *
@@ -10,8 +10,9 @@
 
 package icecube.daq.sim.test;
 
-import icecube.daq.sim.RandomSource;
 import icecube.daq.sim.GenericHit;
+import icecube.daq.sim.RandomSource;
+
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
@@ -20,7 +21,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any RandomSource object should pass.
  *
  * @author pat
- * @version $Id: RandomSourceTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: RandomSourceTest.java 2629 2008-02-11 05:48:36Z dglo $
  */
 public class RandomSourceTest
         extends LoggingCase

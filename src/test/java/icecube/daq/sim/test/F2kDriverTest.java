@@ -1,7 +1,7 @@
 /*
  * class: F2kDriverTest
  *
- * Version $Id: F2kDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: F2kDriverTest.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: June 6 2005
  *
@@ -11,17 +11,18 @@
 package icecube.daq.sim.test;
 
 import icecube.daq.sim.F2kDriver;
+
+import java.nio.ByteBuffer;
+
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
-
-import java.nio.ByteBuffer;
 
 /**
  * This class defines the tests that any F2kDriver object should pass.
  *
  * @author pat
- * @version $Id: F2kDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: F2kDriverTest.java 2629 2008-02-11 05:48:36Z dglo $
  */
 public class F2kDriverTest
         extends LoggingCase

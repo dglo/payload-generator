@@ -1,9 +1,9 @@
 package icecube.daq.sim.domhub;
 
-import java.util.Map;
-import java.util.Hashtable;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * Created by IntelliJ IDEA.

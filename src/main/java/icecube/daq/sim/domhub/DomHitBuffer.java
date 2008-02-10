@@ -25,12 +25,12 @@ public interface DomHitBuffer
     /**
      * Default buffer size is 1 MB.
      */
-    static final int DEFAULT_BUFFER_SIZE = 1*1024*1024;
+    int DEFAULT_BUFFER_SIZE = 1*1024*1024;
 
     /**
      * Default element size is 1 kB.
      */
-    static final int DEFAULT_ELEMENT_SIZE = 1*1024;
+    int DEFAULT_ELEMENT_SIZE = 1*1024;
 
     /**
      * Set the size of the buffer.

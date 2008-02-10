@@ -1,7 +1,7 @@
 /*
  * class: TCalGeneratorTest
  *
- * Version $Id: TcalRecordTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: TcalRecordTest.java 2629 2008-02-11 05:48:36Z dglo $
  *
  * Date: August 13 2005
  *
@@ -10,23 +10,24 @@
 
 package icecube.daq.sim.domhub.test;
 
-import icecube.daq.sim.domhub.TcalRecord;
-import icecube.daq.sim.domhub.IGenericRecord;
 import icecube.daq.sim.domhub.GenericTcalRecord;
+import icecube.daq.sim.domhub.IGenericRecord;
+import icecube.daq.sim.domhub.TcalRecord;
 import icecube.daq.sim.test.LoggingCase;
-import junit.framework.Test;
-import junit.framework.TestSuite;
-import junit.textui.TestRunner;
 
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 
+import junit.framework.Test;
+import junit.framework.TestSuite;
+import junit.textui.TestRunner;
+
 /**
  * This class defines the tests that any TCalGenerator object should pass.
  *
  * @author pat
- * @version $Id: TcalRecordTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: TcalRecordTest.java 2629 2008-02-11 05:48:36Z dglo $
  */
 public class TcalRecordTest
         extends LoggingCase
