@@ -1,7 +1,7 @@
 /*
  * class: F2kFileReaderTest
  *
- * Version $Id: F2kFileReaderTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: F2kFileReaderTest.java 2631 2008-02-11 06:27:31Z dglo $
  *
  * Date: February 25 2005
  *
@@ -12,6 +12,7 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.F2kFileReader;
 import icecube.daq.sim.GenericF2kHit;
+
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
@@ -20,7 +21,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any F2kFileReader object should pass.
  *
  * @author pat
- * @version $Id: F2kFileReaderTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: F2kFileReaderTest.java 2631 2008-02-11 06:27:31Z dglo $
  */
 public class F2kFileReaderTest
         extends LoggingCase

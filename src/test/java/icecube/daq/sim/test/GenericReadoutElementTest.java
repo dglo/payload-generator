@@ -1,7 +1,7 @@
 /*
  * class: GenericReadoutElementTest
  *
- * Version $Id: GenericReadoutElementTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: GenericReadoutElementTest.java 2631 2008-02-11 06:27:31Z dglo $
  *
  * Date: June 7 2005
  *
@@ -11,6 +11,7 @@
 package icecube.daq.sim.test;
 
 import icecube.daq.sim.GenericReadoutElement;
+
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
@@ -19,7 +20,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any GenericReadoutElement object should pass.
  *
  * @author pat
- * @version $Id: GenericReadoutElementTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: GenericReadoutElementTest.java 2631 2008-02-11 06:27:31Z dglo $
  */
 public class GenericReadoutElementTest
         extends LoggingCase

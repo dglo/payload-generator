@@ -1,7 +1,7 @@
 /*
  * class: TriggerDriverTest
  *
- * Version $Id: TriggerDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: TriggerDriverTest.java 2631 2008-02-11 06:27:31Z dglo $
  *
  * Date: June 8 2005
  *
@@ -12,6 +12,7 @@ package icecube.daq.sim.test;
 
 import icecube.daq.sim.TriggerDriver;
 import icecube.daq.trigger.impl.TriggerRequestPayload;
+
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
@@ -20,7 +21,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TriggerDriver object should pass.
  *
  * @author pat
- * @version $Id: TriggerDriverTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: TriggerDriverTest.java 2631 2008-02-11 06:27:31Z dglo $
  */
 public class TriggerDriverTest
         extends LoggingCase

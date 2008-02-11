@@ -1,5 +1,5 @@
 /*
- * Version $Id: RandomTriggerRequest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: RandomTriggerRequest.java 2631 2008-02-11 06:27:31Z dglo $
  *
  * (c) 2005 IceCube Collaboration
  */
@@ -8,7 +8,6 @@ package icecube.daq.sim;
 
 import icecube.daq.payload.ISourceID;
 import icecube.daq.payload.SourceIdRegistry;
-
 import icecube.daq.trigger.IReadoutRequestElement;
 
 import java.util.Collection;

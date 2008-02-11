@@ -1,7 +1,7 @@
 /*
  * class: TimeGeneratorTest
  *
- * Version $Id: TimeGeneratorTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * Version $Id: TimeGeneratorTest.java 2631 2008-02-11 06:27:31Z dglo $
  *
  * Date: March 1 2005
  *
@@ -11,6 +11,7 @@
 package icecube.daq.sim.test;
 
 import icecube.daq.sim.TimeGenerator;
+
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
@@ -19,7 +20,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TimeGenerator object should pass.
  *
  * @author pat
- * @version $Id: TimeGeneratorTest.java 2125 2007-10-12 18:27:05Z ksb $
+ * @version $Id: TimeGeneratorTest.java 2631 2008-02-11 06:27:31Z dglo $
  */
 public class TimeGeneratorTest
         extends LoggingCase
