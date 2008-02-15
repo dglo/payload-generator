@@ -1,7 +1,7 @@
 /*
  * class: PayloadDumper
  *
- * Version $Id: EventDumper.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: EventDumper.java 2652 2008-02-15 20:14:46Z dglo $
  *
  * Date: January 27 2005
  *
@@ -12,12 +12,12 @@ package icecube.daq.sim;
 
 import icecube.daq.eventbuilder.IEventPayload;
 import icecube.daq.eventbuilder.IReadoutDataPayload;
-import icecube.daq.payload.FilePayloadDestination;
+import icecube.daq.io.FilePayloadDestination;
 import icecube.daq.payload.ILoadablePayload;
 import icecube.daq.payload.MasterPayloadFactory;
 import icecube.daq.payload.PayloadDestination;
 import icecube.daq.payload.PayloadInterfaceRegistry;
-import icecube.daq.payload.PayloadReader;
+import icecube.daq.io.PayloadFileReader;
 import icecube.daq.payload.splicer.Payload;
 import icecube.daq.trigger.IHitDataPayload;
 import icecube.icebucket.logging.LoggingConsumer;
@@ -33,7 +33,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class dumps payloads to a StringFilePayloadDestination
  *
- * @version $Id: EventDumper.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: EventDumper.java 2652 2008-02-15 20:14:46Z dglo $
  * @author pat
  */
 public class EventDumper
@@ -57,7 +57,7 @@ public class EventDumper
     /**
      * Payload reader.
      */
-    private PayloadReader reader = null;
+    private PayloadFileReader reader = null;
 
     /**
      * Factory for creating payloads.
@@ -111,11 +111,11 @@ public class EventDumper
      */
     private void dump(String eventFile){
 
-        reader = new PayloadReader(eventFile);
+        reader = new PayloadFileReader(eventFile);
         try {
             reader.open();
         } catch (IOException e) {
-            log.error("Error opening PayloadReader", e);
+            log.error("Error opening " + eventFile, e);
         }
 
         ByteBuffer buffer = ByteBuffer.allocate(320000);

@@ -30,6 +30,10 @@
       <groupId>edu.wisc.icecube</groupId>
       <artifactId>payload</artifactId>
     </dependency>
+    <dependency>
+      <groupId>edu.wisc.icecube</groupId>
+      <artifactId>daq-io</artifactId>
+    </dependency>
   </dependencies>
 
 </project>
