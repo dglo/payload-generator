@@ -1,7 +1,7 @@
 /*
  * class: PayloadDumper
  *
- * Version $Id: EventDumper.java 2652 2008-02-15 20:14:46Z dglo $
+ * Version $Id: EventDumper.java 2656 2008-02-15 23:20:07Z dglo $
  *
  * Date: January 27 2005
  *
@@ -33,7 +33,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class dumps payloads to a StringFilePayloadDestination
  *
- * @version $Id: EventDumper.java 2652 2008-02-15 20:14:46Z dglo $
+ * @version $Id: EventDumper.java 2656 2008-02-15 23:20:07Z dglo $
  * @author pat
  */
 public class EventDumper
@@ -165,7 +165,7 @@ public class EventDumper
             Vector dataPayloads = readoutDataPayload.getDataPayloads();
             for (int j=0; j<dataPayloads.size(); j++) {
                 IHitDataPayload hitDataPayload = (IHitDataPayload) dataPayloads.get(j);
-                String domId = hitDataPayload.getDOMID().getDomIDAsString();
+                String domId = hitDataPayload.getDOMID().toString();
 
                 if (PositionRegistry.isInice(domId)) {
                     log.info("Hit (" + i + "," + j + ") from DOM " + domId + " is inice");

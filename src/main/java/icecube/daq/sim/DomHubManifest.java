@@ -1,7 +1,7 @@
 /*
  * class: EngFmtGenerator
  *
- * Version $Id: DomHubManifest.java 2629 2008-02-11 05:48:36Z dglo $
+ * Version $Id: DomHubManifest.java 2656 2008-02-15 23:20:07Z dglo $
  *
  * Date: June 10 2005
  *
@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * This class produces a ByteBuffer representation of a DomHub manifest record.
  *
- * @version $Id: DomHubManifest.java 2629 2008-02-11 05:48:36Z dglo $
+ * @version $Id: DomHubManifest.java 2656 2008-02-15 23:20:07Z dglo $
  * @author pat
  */
 public final class DomHubManifest
@@ -75,7 +75,7 @@ public final class DomHubManifest
         Iterator iter = domIds.iterator();
         while (iter.hasNext()) {
             IDOMID domId = (IDOMID) iter.next();
-            byteBuffer.putLong(offset, domId.getDomIDAsLong());
+            byteBuffer.putLong(offset, domId.longValue());
             offset += DOMID_SIZE;
         }
 
