@@ -1,7 +1,7 @@
 /*
  * class: PayloadDumper
  *
- * Version $Id: EventDumper.java 2656 2008-02-15 23:20:07Z dglo $
+ * Version $Id: EventDumper.java 2658 2008-02-15 23:45:21Z dglo $
  *
  * Date: January 27 2005
  *
@@ -13,10 +13,13 @@ package icecube.daq.sim;
 import icecube.daq.eventbuilder.IEventPayload;
 import icecube.daq.eventbuilder.IReadoutDataPayload;
 import icecube.daq.io.FilePayloadDestination;
+import icecube.daq.payload.IDOMID;
 import icecube.daq.payload.ILoadablePayload;
+import icecube.daq.payload.ISourceID;
 import icecube.daq.payload.MasterPayloadFactory;
 import icecube.daq.payload.PayloadDestination;
 import icecube.daq.payload.PayloadInterfaceRegistry;
+import icecube.daq.payload.SourceIdRegistry;
 import icecube.daq.io.PayloadFileReader;
 import icecube.daq.payload.splicer.Payload;
 import icecube.daq.trigger.IHitDataPayload;
@@ -33,7 +36,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * This class dumps payloads to a StringFilePayloadDestination
  *
- * @version $Id: EventDumper.java 2656 2008-02-15 23:20:07Z dglo $
+ * @version $Id: EventDumper.java 2658 2008-02-15 23:45:21Z dglo $
  * @author pat
  */
 public class EventDumper
@@ -165,9 +168,10 @@ public class EventDumper
             Vector dataPayloads = readoutDataPayload.getDataPayloads();
             for (int j=0; j<dataPayloads.size(); j++) {
                 IHitDataPayload hitDataPayload = (IHitDataPayload) dataPayloads.get(j);
-                String domId = hitDataPayload.getDOMID().toString();
+                ISourceID srcId = hitDataPayload.getSourceID();
+                IDOMID domId = hitDataPayload.getDOMID();
 
-                if (PositionRegistry.isInice(domId)) {
+                if (SourceIdRegistry.isIniceHubSourceID(srcId)) {
                     log.info("Hit (" + i + "," + j + ") from DOM " + domId + " is inice");
                     try {
                         iniceHitDestination.writePayload(hitDataPayload);
