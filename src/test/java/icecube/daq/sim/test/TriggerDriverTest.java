@@ -1,7 +1,7 @@
 /*
  * class: TriggerDriverTest
  *
- * Version $Id: TriggerDriverTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * Version $Id: TriggerDriverTest.java 2657 2008-02-15 23:41:14Z dglo $
  *
  * Date: June 8 2005
  *
@@ -21,7 +21,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any TriggerDriver object should pass.
  *
  * @author pat
- * @version $Id: TriggerDriverTest.java 2631 2008-02-11 06:27:31Z dglo $
+ * @version $Id: TriggerDriverTest.java 2657 2008-02-15 23:41:14Z dglo $
  */
 public class TriggerDriverTest
         extends LoggingCase
@@ -81,8 +81,8 @@ public class TriggerDriverTest
         int type = trigger.getTriggerType();
         int configId = trigger.getTriggerConfigID();
         int sourceId = trigger.getSourceID().getSourceID();
-        long firstTime = trigger.getFirstTimeUTC().getUTCTimeAsLong();
-        long lastTime = trigger.getLastTimeUTC().getUTCTimeAsLong();
+        long firstTime = trigger.getFirstTimeUTC().longValue();
+        long lastTime = trigger.getLastTimeUTC().longValue();
 
         assertEquals(uid, 1);
         assertEquals(type, 1);

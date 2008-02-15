@@ -1,7 +1,7 @@
 /*
  * class: SimpleDriverTest
  *
- * Version $Id: SimpleDriverTest.java 2656 2008-02-15 23:20:07Z dglo $
+ * Version $Id: SimpleDriverTest.java 2657 2008-02-15 23:41:14Z dglo $
  *
  * Date: June 6 2005
  *
@@ -25,7 +25,7 @@ import junit.textui.TestRunner;
  * This class defines the tests that any SimpleDriver object should pass.
  *
  * @author pat
- * @version $Id: SimpleDriverTest.java 2656 2008-02-15 23:20:07Z dglo $
+ * @version $Id: SimpleDriverTest.java 2657 2008-02-15 23:41:14Z dglo $
  */
 public class SimpleDriverTest
         extends LoggingCase
@@ -59,7 +59,7 @@ public class SimpleDriverTest
         assertEquals(payload.getPayloadInterfaceType(), PayloadInterfaceRegistry.I_HIT_PAYLOAD);
 
         IHitPayload hitPayload = (IHitPayload) payload;
-        long time = hitPayload.getHitTimeUTC().getUTCTimeAsLong();
+        long time = hitPayload.getHitTimeUTC().longValue();
         long domId = hitPayload.getDOMID().longValue();
         int sourceId = hitPayload.getSourceID().getSourceID();
         int triggerMode = hitPayload.getTriggerType();
@@ -84,7 +84,7 @@ public class SimpleDriverTest
         assertEquals(payload.getPayloadInterfaceType(), PayloadInterfaceRegistry.I_HIT_DATA_PAYLOAD);
 
         IHitDataPayload hitPayload = (IHitDataPayload) payload;
-        long time = hitPayload.getHitTimeUTC().getUTCTimeAsLong();
+        long time = hitPayload.getHitTimeUTC().longValue();
         long domId = hitPayload.getDOMID().longValue();
         int sourceId = hitPayload.getSourceID().getSourceID();
         int triggerMode = hitPayload.getTriggerType();
